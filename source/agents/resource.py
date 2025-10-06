@@ -9,7 +9,7 @@ class ResourceAgent(Agent):
     """
     One agent for each resource in the event log
     """
-    def __init__(self, unique_id, model, resource, timer, contractor_agent=None):
+    def __init__(self, unique_id, model, resource, timer, contractor_agent=None, resource_costs=None):
         super().__init__(unique_id, model)
         self.resource = resource
         self.model = model
@@ -23,6 +23,7 @@ class ResourceAgent(Agent):
             self.calendar = next((ids['calendar'] for role, ids in self.model.roles.items() if self.resource in ids['agents']), None)
         self.timer = timer
         self.occupied_times = []
+        self.cost_per_hour = resource_costs.get(unique_id)
 
     def step(self, last_possible_agent=False, parallel_activity=False, current_timestamp=None, perform_multitask=False):
         if not parallel_activity:

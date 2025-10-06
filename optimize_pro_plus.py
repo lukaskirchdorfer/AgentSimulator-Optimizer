@@ -85,10 +85,11 @@ def run_single_simulation(df_train, sim_params):
     
     return simulated_log
 
-def advanced_fitness_function(individual_policy_dict, base_sim_params, df_train, runs_per_fitness, resource_costs):
+def advanced_fitness_function(individual_policy_dict, base_sim_params, df_train, runs_per_fitness, resource_costs, agent_ranking="transition_probs"):
     """Parallel-safe fitness function returning five objectives."""
     current_sim_params = copy.deepcopy(base_sim_params)
     current_sim_params['agent_transition_probabilities'] = individual_policy_dict
+    current_sim_params['agent_ranking'] = agent_ranking
     
     results = []
     for _ in range(runs_per_fitness):
@@ -469,7 +470,7 @@ def main(args):
     }
     print("\n--- Step 1: Discovering Baseline Simulation Parameters ---")
     simulator = AgentSimulator(params)
-    df_train, df_test, num_cases, df_val, num_val_cases = simulator._split_log()
+    df_train, df_test, num_cases, df_val, num_val_cases = simulator._split_log(split=False)
     df_train, baseline_parameters = discover_simulation_parameters(
         df_train, df_test, df_val, simulator.data_dir, num_cases, num_val_cases,
         determine_automatically=params['determine_automatically'],
@@ -497,27 +498,57 @@ def main(args):
     num_variable_dps = sum(len(acts) for acts in variable_policy.values())
     print(f"Reduced search space from {num_original_dps} to {num_variable_dps} variable decision points.")
     
-    print("\n--- Step 2: Evaluating Baseline Performance ---")
-    gt_cost, gt_time, gt_wait, gt_apc, gt_ta = calculate_metrics(df_test.copy(), resource_costs, baseline_parameters['agent_to_resource'])
+    # print("\n--- Step 2: Evaluating Baseline Performance ---")
+    # gt_cost, gt_time, gt_wait, gt_apc, gt_ta = calculate_metrics(df_test.copy(), resource_costs, baseline_parameters['agent_to_resource'])
     
-    # --- Capture ground truth metrics for summary ---
-    gt_header = "Ground Truth (from Test Log):"
-    gt_line = f"  -> Cost: ${gt_cost:,.8f}, Time: {gt_time/3600:.8f}h, Wait: {gt_wait/3600:.8f}h, Agents/Case: {gt_apc:.8f}, Total Agents: {gt_ta:.0f}"
-    print(gt_header)
-    print(gt_line)
-    summary_lines.extend(["\n--- Baseline Performance ---", gt_header, gt_line])
+    # # --- Capture ground truth metrics for summary ---
+    # gt_header = "Ground Truth (from Test Log):"
+    # gt_line = f"  -> Cost: ${gt_cost:,.8f}, Time: {gt_time/3600:.8f}h, Wait: {gt_wait/3600:.8f}h, Agents/Case: {gt_apc:.8f}, Total Agents: {gt_ta:.0f}"
+    # print(gt_header)
+    # print(gt_line)
+    # summary_lines.extend(["\n--- Baseline Performance ---", gt_header, gt_line])
 
+    ### Baseline As-is Performance
+    print("\n--- Step 2.1: Evaluating Baseline Performance: As-is ---")
     baseline_eval_params = copy.deepcopy(baseline_parameters)
     base_cost, base_time, base_wait, base_apc, base_ta = advanced_fitness_function(
-        original_policy, baseline_eval_params, df_train, args.runs_per_fitness, resource_costs
+        original_policy, baseline_eval_params, df_train, args.runs_per_fitness, resource_costs, agent_ranking="transition_probs"
     )
-    
     # --- Capture simulated baseline metrics for summary ---
-    base_header = "\nSimulated Baseline (Original Policy):"
+    base_header = "\nSimulated Baseline (As-is):"
+    base_line = f"  -> Cost: ${base_cost:,.8f}, Time: {base_time/3600:.8f}h, Wait: {base_wait/3600:.8f}h, Agents/Case: {base_apc:.8f}, Total Agents: {base_ta:.0f}"
+    print(base_header)
+    print(base_line)
+    summary_lines.extend(["\n--- Baseline Performance ---", base_header, base_line])
+
+    ### Baseline 2:
+    print("\n--- Step 2.2: Evaluating Baseline Performance: Availability ---")
+    baseline_eval_params = copy.deepcopy(baseline_parameters)
+    base_cost, base_time, base_wait, base_apc, base_ta = advanced_fitness_function(
+        original_policy, baseline_eval_params, df_train, args.runs_per_fitness, resource_costs, agent_ranking="availability"
+    )
+    # --- Capture simulated baseline metrics for summary ---
+    base_header = "\nSimulated Baseline (Availability):"
     base_line = f"  -> Cost: ${base_cost:,.8f}, Time: {base_time/3600:.8f}h, Wait: {base_wait/3600:.8f}h, Agents/Case: {base_apc:.8f}, Total Agents: {base_ta:.0f}"
     print(base_header)
     print(base_line)
     summary_lines.extend([base_header, base_line])
+
+    ### Baseline 3:
+    print("\n--- Step 2.3: Evaluating Baseline Performance: Cost ---")
+    baseline_eval_params = copy.deepcopy(baseline_parameters)
+    base_cost, base_time, base_wait, base_apc, base_ta = advanced_fitness_function(
+        original_policy, baseline_eval_params, df_train, args.runs_per_fitness, resource_costs, agent_ranking="cost"
+    )
+    # --- Capture simulated baseline metrics for summary ---
+    base_header = "\nSimulated Baseline (Cost):"
+    base_line = f"  -> Cost: ${base_cost:,.8f}, Time: {base_time/3600:.8f}h, Wait: {base_wait/3600:.8f}h, Agents/Case: {base_apc:.8f}, Total Agents: {base_ta:.0f}"
+    print(base_header)
+    print(base_line)
+    summary_lines.extend([base_header, base_line])
+
+
+    ### Baseline 4:
 
     print(f"\n--- Step 3: Starting Multi-Objective Optimization for {', '.join(selected_objectives)} ---")
     creator.create("FitnessMulti", base.Fitness, weights=(-1.0,) * num_objectives)

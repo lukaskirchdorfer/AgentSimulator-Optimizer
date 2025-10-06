@@ -288,7 +288,7 @@ class ContractorAgent(Agent):
     One contractor agent to assign tasks using a probability-first,
     availability-second triage approach.
     """
-    def __init__(self, unique_id, model, activities, transition_probabilities, agent_activity_mapping):
+    def __init__(self, unique_id, model, activities, transition_probabilities, agent_activity_mapping, agent_ranking="transition_probs"):
         super().__init__(unique_id, model)
         self.activities = activities
         self.transition_probabilities = transition_probabilities
@@ -296,6 +296,7 @@ class ContractorAgent(Agent):
         self.model = model
         self.current_activity_index = None
         self.activity_performed = False
+        self.agent_ranking = agent_ranking
 
     def _get_ranked_agents_by_probability(self, list_of_agents):
         """
@@ -338,24 +339,31 @@ class ContractorAgent(Agent):
             self.activity_performed = False
             return
 
-        def _handle_agent_group(agent_group, is_parallel):
+        def _handle_agent_group(agent_group, is_parallel,):
             if not agent_group: return
-            
-            # Rank agents based on probability
-            ranked_agents = self._get_ranked_agents_by_probability(agent_group)
-            
-            # If all probabilities were 0, fallback to sorting by availability
-            # to ensure the case waits for the soonest-available agent.
-            all_probs_zero = all(
-                (self.model.agent_transition_probabilities
-                    .get(self.case.previous_agent, {})
-                    .get(self.case.activities_performed[-1] if self.case.activities_performed else '', {})
-                    .get(agent, {})
-                    .get(self.activities[self.new_activity_index], 0.0)) == 0.0
-                for agent in ranked_agents
-            )
-            if all_probs_zero and not self.model.central_orchestration:
-                 ranked_agents = self.sort_agents_by_availability(ranked_agents)
+
+            if self.agent_ranking == "transition_probs":
+                # Rank agents based on probability
+                ranked_agents = self._get_ranked_agents_by_probability(agent_group)
+                
+                # If all probabilities were 0, fallback to sorting by availability
+                # to ensure the case waits for the soonest-available agent.
+                all_probs_zero = all(
+                    (self.model.agent_transition_probabilities
+                        .get(self.case.previous_agent, {})
+                        .get(self.case.activities_performed[-1] if self.case.activities_performed else '', {})
+                        .get(agent, {})
+                        .get(self.activities[self.new_activity_index], 0.0)) == 0.0
+                    for agent in ranked_agents
+                )
+                if all_probs_zero and not self.model.central_orchestration:
+                    ranked_agents = self.sort_agents_by_availability(ranked_agents)
+            elif self.agent_ranking == "availability":
+                ranked_agents = self.sort_agents_by_availability(agent_group)
+            elif self.agent_ranking == "cost":
+                ranked_agents = self.sort_agents_by_cost(agent_group)
+
+            ranked_agents = [ranked_agents[0]]
 
 
             # Iterate through the ranked list to find an available agent
@@ -391,6 +399,19 @@ class ContractorAgent(Agent):
         if not agent_keys:
             return []
         return sorted(agent_keys, key=lambda x: self.model.agents_busy_until.get(x, pd.Timestamp.min))
+
+    def sort_agents_by_cost(self, agent_keys):
+        """Sorts a list of agents by their cost per hour, starting with the lowest cost."""
+        if not agent_keys:
+            return []
+        # resource_costs may use string keys; try int then str, fallback to very high cost
+        def _get_cost(agent_id):
+            cost = self.model.resource_costs.get(str(agent_id))
+            # if cost is None:
+            #     cost = self.model.resource_costs.get(str(agent_id))
+            return cost #if cost is not None else float('inf')
+
+        return sorted(agent_keys, key=_get_cost)
     
     
     def get_current_timestamp(self, agent_id, parallel_activity=False):

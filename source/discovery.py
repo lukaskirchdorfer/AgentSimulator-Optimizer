@@ -21,10 +21,14 @@ def discover_simulation_parameters(df_train, df_test, df_val, data_dir, num_case
     """
     # split into train, test, val
     df_train, agent_to_resource = preprocess(df_train)
-    df_test, _ = preprocess(df_test)
-    df_val, _ = preprocess(df_val)
-    START_TIME = min(df_test.groupby('case_id')['start_timestamp'].min().to_list())
-    START_TIME_VAL = min(df_val.groupby('case_id')['start_timestamp'].min().to_list())
+    if df_test is not None:
+        df_test, _ = preprocess(df_test)
+        df_val, _ = preprocess(df_val)
+        START_TIME = min(df_test.groupby('case_id')['start_timestamp'].min().to_list())
+        START_TIME_VAL = min(df_val.groupby('case_id')['start_timestamp'].min().to_list())
+    else:
+        START_TIME = max(df_train.groupby('case_id')['start_timestamp'].max().to_list())
+        START_TIME_VAL = None
 
 
     df_train_without_end_activity = store_preprocessed_data(df_train, df_test, df_val, data_dir)
@@ -54,8 +58,12 @@ def discover_simulation_parameters(df_train, df_test, df_val, data_dir, num_case
 
 
     # sample arrival times for training and validation data
+    print(f"num cases to simulate: {num_cases_to_simulate}")
     case_arrival_times, train_params = get_case_arrival_times(df_train, start_timestamp=START_TIME, num_cases_to_simulate=num_cases_to_simulate, train=True)
-    case_arrival_times_val, _ = get_case_arrival_times(df_val, start_timestamp=START_TIME_VAL, num_cases_to_simulate=num_cases_to_simulate_val, train=False, train_params=train_params)
+    if df_val is not None:
+        case_arrival_times_val, _ = get_case_arrival_times(df_val, start_timestamp=START_TIME_VAL, num_cases_to_simulate=num_cases_to_simulate_val, train=False, train_params=train_params)
+    else:
+        case_arrival_times_val = None
 
 
     simulation_parameters = {

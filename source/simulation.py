@@ -91,15 +91,21 @@ class BusinessProcessModel(Model):
         self.central_orchestration = simulation_parameters['central_orchestration']
         self.discover_parallel_work = False
         self.schedule = MyScheduler(self,)
+        self.resource_costs = simulation_parameters['resource_costs']
+        if 'agent_ranking' in simulation_parameters:
+            agent_ranking = simulation_parameters['agent_ranking']
+        else:
+            agent_ranking = "transition_probs"
         self.contractor_agent = ContractorAgent(unique_id=9999, 
                                                 model=self, 
                                                 activities=activities, 
                                                 transition_probabilities=simulation_parameters['transition_probabilities'], 
-                                                agent_activity_mapping=simulation_parameters['agent_activity_mapping'])
+                                                agent_activity_mapping=simulation_parameters['agent_activity_mapping'],
+                                                agent_ranking=agent_ranking)
         self.schedule.add(self.contractor_agent)
 
         for agent_id in range(len(self.resources)):
-            agent = ResourceAgent(agent_id, self, self.resources[agent_id], self.timer, self.contractor_agent)
+            agent = ResourceAgent(agent_id, self, self.resources[agent_id], self.timer, self.contractor_agent, self.resource_costs)
             self.schedule.add(agent)
 
         # Data collector to track agent activities over time
