@@ -362,6 +362,10 @@ class ContractorAgent(Agent):
                 ranked_agents = self.sort_agents_by_availability(agent_group)
             elif self.agent_ranking == "cost":
                 ranked_agents = self.sort_agents_by_cost(agent_group)
+            elif self.agent_ranking == "random":
+                ranked_agents = self.sort_agents_by_random(agent_group)
+            elif self.agent_ranking == "SPT":
+                ranked_agents = self.sort_agents_by_SPT(agent_group)
 
             ranked_agents = [ranked_agents[0]]
 
@@ -401,17 +405,44 @@ class ContractorAgent(Agent):
         return sorted(agent_keys, key=lambda x: self.model.agents_busy_until.get(x, pd.Timestamp.min))
 
     def sort_agents_by_cost(self, agent_keys):
-        """Sorts a list of agents by their cost per hour, starting with the lowest cost."""
+        """Sorts agents by cost, and if multiple share the cheapest cost, returns only the earliest available among them."""
         if not agent_keys:
             return []
-        # resource_costs may use string keys; try int then str, fallback to very high cost
+
         def _get_cost(agent_id):
             cost = self.model.resource_costs.get(str(agent_id))
-            # if cost is None:
-            #     cost = self.model.resource_costs.get(str(agent_id))
-            return cost #if cost is not None else float('inf')
+            return float('inf') if cost is None else cost
 
-        return sorted(agent_keys, key=_get_cost)
+        # Find the minimum cost among provided agents
+        min_cost = min((_get_cost(a) for a in agent_keys), default=float('inf'))
+
+        # Filter agents that have the minimum (cheapest) cost
+        cheapest_agents = [a for a in agent_keys if _get_cost(a) == min_cost]
+
+        if len(cheapest_agents) == 1:
+            return cheapest_agents
+
+        # Tie-break by earliest availability
+        cheapest_earliest = min(
+            cheapest_agents,
+            key=lambda x: self.model.agents_busy_until.get(x, pd.Timestamp.min)
+        )
+        return [cheapest_earliest]
+
+    def sort_agents_by_SPT(self, agent_keys):
+        """Sorts agents by SPT (Shortest Processing Time)."""
+        if not agent_keys:
+            return []
+        return sorted(agent_keys, key=lambda x: self.model.activity_durations_dict[x][self.activities[self.new_activity_index]].mean)
+
+    def sort_agents_by_random(self, agent_keys):
+        """Sorts a list of agents by random."""
+        if not agent_keys:
+            return []
+        shuffled = list(agent_keys)  # copy
+        random.shuffle(shuffled)     # in-place shuffle
+        return shuffled
+
     
     
     def get_current_timestamp(self, agent_id, parallel_activity=False):

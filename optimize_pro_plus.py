@@ -549,6 +549,30 @@ def main(args):
 
 
     ### Baseline 4:
+    print("\n--- Step 2.4: Evaluating Baseline Performance: Random ---")
+    baseline_eval_params = copy.deepcopy(baseline_parameters)
+    base_cost, base_time, base_wait, base_apc, base_ta = advanced_fitness_function(
+        original_policy, baseline_eval_params, df_train, args.runs_per_fitness, resource_costs, agent_ranking="random"
+    )
+    # --- Capture simulated baseline metrics for summary ---
+    base_header = "\nSimulated Baseline (Random):"
+    base_line = f"  -> Cost: ${base_cost:,.8f}, Time: {base_time/3600:.8f}h, Wait: {base_wait/3600:.8f}h, Agents/Case: {base_apc:.8f}, Total Agents: {base_ta:.0f}"
+    print(base_header)
+    print(base_line)
+    summary_lines.extend([base_header, base_line])
+
+    ### Baseline 5:
+    print("\n--- Step 2.5: Evaluating Baseline Performance: SPT ---")
+    baseline_eval_params = copy.deepcopy(baseline_parameters)
+    base_cost, base_time, base_wait, base_apc, base_ta = advanced_fitness_function(
+        original_policy, baseline_eval_params, df_train, args.runs_per_fitness, resource_costs, agent_ranking="SPT"
+    )
+    # --- Capture simulated baseline metrics for summary ---
+    base_header = "\nSimulated Baseline (SPT):"
+    base_line = f"  -> Cost: ${base_cost:,.8f}, Time: {base_time/3600:.8f}h, Wait: {base_wait/3600:.8f}h, Agents/Case: {base_apc:.8f}, Total Agents: {base_ta:.0f}"
+    print(base_header)
+    print(base_line)
+    summary_lines.extend([base_header, base_line])
 
     print(f"\n--- Step 3: Starting Multi-Objective Optimization for {', '.join(selected_objectives)} ---")
     creator.create("FitnessMulti", base.Fitness, weights=(-1.0,) * num_objectives)
