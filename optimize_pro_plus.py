@@ -82,21 +82,29 @@ def run_single_simulation(df_train, sim_params):
     simulated_log = pd.DataFrame(business_process_model.simulated_events)
     if not simulated_log.empty:
         simulated_log['resource'] = simulated_log['agent'].map(local_sim_params['agent_to_resource'])
+
+    
     
     return simulated_log
 
-def advanced_fitness_function(individual_policy_dict, base_sim_params, df_train, runs_per_fitness, resource_costs, agent_ranking="transition_probs"):
+def advanced_fitness_function(individual_policy_dict, base_sim_params, df_train, runs_per_fitness, resource_costs, agent_ranking="transition_probs", data_dir_simulated_logs=None, store_simulated_logs=False):
     """Parallel-safe fitness function returning five objectives."""
     current_sim_params = copy.deepcopy(base_sim_params)
     current_sim_params['agent_transition_probabilities'] = individual_policy_dict
     current_sim_params['agent_ranking'] = agent_ranking
     
     results = []
-    for _ in range(runs_per_fitness):
+    for i in range(runs_per_fitness):
         simulated_log = run_single_simulation(df_train, current_sim_params)
         # simulated_log = run_single_simulation(df_train, copy.deepcopy(current_sim_params))
         metrics = calculate_metrics(simulated_log, resource_costs, base_sim_params['agent_to_resource'])
         results.append(metrics)
+
+        # save the simulated log
+        if store_simulated_logs:
+            path_to_file = os.path.join(data_dir_simulated_logs,agent_ranking,f"simulated_log_{i}.csv")
+            os.makedirs(os.path.join(data_dir_simulated_logs,agent_ranking), exist_ok=True)
+            simulated_log.to_csv(path_to_file, index=False)
     
     return np.mean(results, axis=0)
 
@@ -512,7 +520,7 @@ def main(args):
     print("\n--- Step 2.1: Evaluating Baseline Performance: As-is ---")
     baseline_eval_params = copy.deepcopy(baseline_parameters)
     base_cost, base_time, base_wait, base_apc, base_ta = advanced_fitness_function(
-        original_policy, baseline_eval_params, df_train, args.runs_per_fitness, resource_costs, agent_ranking="transition_probs"
+        original_policy, baseline_eval_params, df_train, args.runs_per_fitness, resource_costs, agent_ranking="transition_probs", data_dir_simulated_logs=simulator.data_dir, store_simulated_logs=True
     )
     # --- Capture simulated baseline metrics for summary ---
     base_header = "\nSimulated Baseline (As-is):"
@@ -525,7 +533,7 @@ def main(args):
     print("\n--- Step 2.2: Evaluating Baseline Performance: Availability ---")
     baseline_eval_params = copy.deepcopy(baseline_parameters)
     base_cost, base_time, base_wait, base_apc, base_ta = advanced_fitness_function(
-        original_policy, baseline_eval_params, df_train, args.runs_per_fitness, resource_costs, agent_ranking="availability"
+        original_policy, baseline_eval_params, df_train, args.runs_per_fitness, resource_costs, agent_ranking="availability", data_dir_simulated_logs=simulator.data_dir, store_simulated_logs=True
     )
     # --- Capture simulated baseline metrics for summary ---
     base_header = "\nSimulated Baseline (Availability):"
@@ -538,7 +546,7 @@ def main(args):
     print("\n--- Step 2.3: Evaluating Baseline Performance: Cost ---")
     baseline_eval_params = copy.deepcopy(baseline_parameters)
     base_cost, base_time, base_wait, base_apc, base_ta = advanced_fitness_function(
-        original_policy, baseline_eval_params, df_train, args.runs_per_fitness, resource_costs, agent_ranking="cost"
+        original_policy, baseline_eval_params, df_train, args.runs_per_fitness, resource_costs, agent_ranking="cost", data_dir_simulated_logs=simulator.data_dir, store_simulated_logs=True
     )
     # --- Capture simulated baseline metrics for summary ---
     base_header = "\nSimulated Baseline (Cost):"
@@ -552,7 +560,7 @@ def main(args):
     print("\n--- Step 2.4: Evaluating Baseline Performance: Random ---")
     baseline_eval_params = copy.deepcopy(baseline_parameters)
     base_cost, base_time, base_wait, base_apc, base_ta = advanced_fitness_function(
-        original_policy, baseline_eval_params, df_train, args.runs_per_fitness, resource_costs, agent_ranking="random"
+        original_policy, baseline_eval_params, df_train, args.runs_per_fitness, resource_costs, agent_ranking="random", data_dir_simulated_logs=simulator.data_dir, store_simulated_logs=True
     )
     # --- Capture simulated baseline metrics for summary ---
     base_header = "\nSimulated Baseline (Random):"
@@ -565,7 +573,7 @@ def main(args):
     print("\n--- Step 2.5: Evaluating Baseline Performance: SPT ---")
     baseline_eval_params = copy.deepcopy(baseline_parameters)
     base_cost, base_time, base_wait, base_apc, base_ta = advanced_fitness_function(
-        original_policy, baseline_eval_params, df_train, args.runs_per_fitness, resource_costs, agent_ranking="SPT"
+        original_policy, baseline_eval_params, df_train, args.runs_per_fitness, resource_costs, agent_ranking="SPT", data_dir_simulated_logs=simulator.data_dir, store_simulated_logs=True
     )
     # --- Capture simulated baseline metrics for summary ---
     base_header = "\nSimulated Baseline (SPT):"
@@ -573,6 +581,8 @@ def main(args):
     print(base_header)
     print(base_line)
     summary_lines.extend([base_header, base_line])
+
+    x=zy
 
     print(f"\n--- Step 3: Starting Multi-Objective Optimization for {', '.join(selected_objectives)} ---")
     creator.create("FitnessMulti", base.Fitness, weights=(-1.0,) * num_objectives)
