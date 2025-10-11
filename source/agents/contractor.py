@@ -6,7 +6,7 @@ import scipy.stats as st
 import time
 import pandas as pd
 
-class ContractorAgentOld(Agent):
+class ContractorAgent_(Agent):
     """
     One contractor agent to assign tasks using the contraction net protocol
     """
@@ -341,7 +341,7 @@ class ContractorAgentOld(Agent):
 
             prefix = self.case.activities_performed
 
-            if self.model.central_orchestration:
+            if self.model.central_orchestration == False:
                 while tuple(prefix) not in self.transition_probabilities.keys():
                     prefix = prefix[1:]
                 # Extract activities and probabilities
@@ -1050,84 +1050,31 @@ class ContractorAgent(Agent):
 
             prefix = self.case.activities_performed
 
-            if self.model.central_orchestration:
+            if self.model.central_orchestration == False:
                 while tuple(prefix) not in self.transition_probabilities.keys():
                     prefix = prefix[1:]
                 # Extract activities and probabilities
-                # print(self.transition_probabilities[tuple(prefix)])
                 activity_list = list(self.transition_probabilities[tuple(prefix)].keys())
                 probabilities = list(self.transition_probabilities[tuple(prefix)].values())
-
-
-                # original
-                # next_activity = random.choices(activity_list, weights=probabilities, k=1)[0]
-                # change
                 if self.model.params.get('execution_type', 'original') == 'random':
                     possible_activities = [a for a in self.activities if a != 'zzz_end'] 
                     next_activity = random.choice(possible_activities)
                 else:
                     next_activity = random.choices(activity_list, weights=probabilities, k=1)[0]
-
-
-                # # Sample an activity based on the probabilities
-                # while True:
-                #     # print(f"activity_list: {activity_list}")
-                #     # print(f"probabilities: {probabilities}")
-                #     next_activity = random.choices(activity_list, weights=probabilities, k=1)[0]
-                #     # print(f"next_activity: {next_activity}")
-                #     if len(activity_list) > 1:
-                #         if self.check_if_all_preceding_activities_performed(next_activity):
-                #             # print("True")
-                #             break
-                #         else:
-                #             print(f"Not all preceding activities performed for {next_activity}")
-                #     else:
-                #         break
                 self.new_activity_index = self.activities.index(next_activity)
             else:
                 while tuple(prefix) not in self.transition_probabilities.keys() or self.case.previous_agent not in self.transition_probabilities[tuple(prefix)].keys():
                     prefix = prefix[1:]
                 # Extract activities and probabilities
-                # print(self.transition_probabilities[tuple(prefix)])
                 activity_list = list(self.transition_probabilities[tuple(prefix)][self.case.previous_agent].keys())
                 
                 probabilities = list(self.transition_probabilities[tuple(prefix)][self.case.previous_agent].values())
-                
-                # original
-                # next_activity = random.choices(activity_list, weights=probabilities, k=1)[0]
-                # change
                 if self.model.params.get('execution_type', 'original') == 'random':
                     possible_activities = [a for a in self.activities if a != 'zzz_end'] 
                     next_activity = random.choice(possible_activities)
                 else:
                     next_activity = random.choices(activity_list, weights=probabilities, k=1)[0]
-
-
-                # # Sample an activity based on the probabilities
-                # time_0 = time.time()
-                # while True:
-                #     # print("get next activity")
-                #     # print(f"transition_probabilities: {self.transition_probabilities}")
-                #     # print(f"prefix: {prefix}")
-                #     # print(f"previous_agent: {self.case.previous_agent}")
-                #     # print(f"activity_list: {activity_list}")
-                #     # print(f"probabilities: {probabilities}")
-                #     next_activity = random.choices(activity_list, weights=probabilities, k=1)[0]
-                #     if len(activity_list) > 1:
-                #         if self.check_if_all_preceding_activities_performed(next_activity):
-                #             # print("True")
-                #             break
-                #         else:
-                #             print(f"Not all preceding activities performed for {next_activity}")
-                #     else:
-                #         break
-                # time_1 = time.time()
-                # print(f"duration: {time_1 - time_0}")
                 self.new_activity_index = self.activities.index(next_activity)
-
-            # print(f"current_act: {current_act}")
-            # print(f"next_activity: {next_activity}")
-            # print(self.model.prerequisites)
 
 
             # check if next activity is zzz_end

@@ -783,7 +783,7 @@ def determine_agent_behavior_type_and_extraneous_delays(simulation_parameters, d
 
         simulation_parameters['central_orchestration'] = central_orchestration_parameter
         if central_orchestration_parameter == False:
-            simulation_parameters['transition_probabilities'] = simulation_parameters['transition_probabilities_autonomous']
+            # simulation_parameters['transition_probabilities'] = simulation_parameters['transition_probabilities_autonomous']
             simulation_parameters['agent_transition_probabilities'] = simulation_parameters['agent_transition_probabilities_autonomous']
 
 

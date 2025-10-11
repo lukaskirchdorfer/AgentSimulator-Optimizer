@@ -18,6 +18,7 @@ from deap import base, creator, tools, algorithms
 from source.agent_simulator import AgentSimulator
 from source.discovery import discover_simulation_parameters
 from source.simulation import BusinessProcessModel, Case
+from source.utils import generate_costs_file
 
 # =============================================================================
 # --- Core Simulation and Metric Calculation Functions ---
@@ -435,12 +436,12 @@ def main(args):
     # ### NEW: Initialize a list to hold summary text for the final report ###
     summary_lines = [f"Run Summary for: {run_name}\n{'='*40}"]
     
-    try:
-        with open(args.costs_path, 'r') as f:
-            resource_costs = {str(k): v for k, v in json.load(f).items()}
-        print(f"Successfully loaded resource costs from {args.costs_path}")
-    except FileNotFoundError:
-        print(f"Error: Costs file not found at {args.costs_path}"); return
+    # try:
+    #     with open(args.costs_path, 'r') as f:
+    #         resource_costs = {str(k): v for k, v in json.load(f).items()}
+    #     print(f"Successfully loaded resource costs from {args.costs_path}")
+    # except FileNotFoundError:
+    #     print(f"Error: Costs file not found at {args.costs_path}"); return
 
     all_possible_objectives = ['cost', 'time', 'wait', 'agents_per_case', 'total_agents']
     selected_objectives = args.objectives.split(',')
@@ -485,8 +486,19 @@ def main(args):
         central_orchestration=params['central_orchestration'],
         discover_extr_delays=params['discover_extr_delays']
     )
+
+    try:
+        with open(args.costs_path, 'r') as f:
+            resource_costs = {str(k): v for k, v in json.load(f).items()}
+        print(f"Successfully loaded resource costs from {args.costs_path}")
+    except FileNotFoundError:
+        print(f"Error: Costs file not found at {args.costs_path}")
+        # generate new costs file
+        resource_costs = generate_costs_file(df_train, baseline_parameters, dataset)
+
     baseline_parameters['resource_costs'] = resource_costs
     original_policy = baseline_parameters['agent_transition_probabilities']
+    print("Model discovery finished")
     
     # ### NEW: Helper function to serialize numpy types for JSON ###
     def convert_keys_to_str(obj):
@@ -581,8 +593,6 @@ def main(args):
     print(base_header)
     print(base_line)
     summary_lines.extend([base_header, base_line])
-
-    x=zy
 
     print(f"\n--- Step 3: Starting Multi-Objective Optimization for {', '.join(selected_objectives)} ---")
     creator.create("FitnessMulti", base.Fitness, weights=(-1.0,) * num_objectives)
