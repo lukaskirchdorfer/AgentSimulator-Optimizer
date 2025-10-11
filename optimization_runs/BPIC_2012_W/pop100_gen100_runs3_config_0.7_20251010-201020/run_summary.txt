@@ -1,0 +1,66 @@
+Run Summary for: pop100_gen100_runs3_config_0.7_20251010-201020
+========================================
+
+--- Run Parameters ---
+Log Path: raw_data/BPIC_2012_W.csv
+Objectives: cost,wait
+Population Size: 100
+Generations: 100
+Runs per Fitness Eval: 3
+Crossover Probability: 0.7
+Mutation Probability: 0.3
+Cores Used: 20
+
+--- Baseline Performance ---
+
+Simulated Baseline (As-is):
+  -> Cost: $262,969.59138057, Time: 2.30603938h, Wait: 0.03070659h, Agents/Case: 1.76533179, Total Agents: 62
+
+Simulated Baseline (Availability):
+  -> Cost: $187,459.02394832, Time: 1.73238868h, Wait: 0.02493016h, Agents/Case: 5.16966531, Total Agents: 62
+
+Simulated Baseline (Cost):
+  -> Cost: $22,796.94915902, Time: 0.51309558h, Wait: 0.03269088h, Agents/Case: 1.43277230, Total Agents: 6
+
+Simulated Baseline (Random):
+  -> Cost: $276,366.18264683, Time: 3.42645851h, Wait: 0.20496505h, Agents/Case: 5.52969627, Total Agents: 62
+
+Simulated Baseline (SPT):
+  -> Cost: $104,379.99314355, Time: 1.25966461h, Wait: 0.07350860h, Agents/Case: 4.24066551, Total Agents: 57
+
+--- Optimization Results ---
+Found 17 non-dominated solutions (the Pareto Front).
+
+--- Pareto Front Solutions ---
+Sol | Cost            | Wait           
+----|------------------------------------
+1   | 162471          | 0.0439031      
+2   | 164897          | 0.041953       
+3   | 168367          | 0.0385386      
+4   | 173115          | 0.0380568      
+5   | 173126          | 0.0367126      
+6   | 174372          | 0.0276272      
+7   | 177457          | 0.021122       
+8   | 190014          | 0.018577       
+9   | 199911          | 0.0185336      
+10  | 208843          | 0.0169431      
+11  | 218218          | 0.0168634      
+12  | 224103          | 0.0157441      
+13  | 224857          | 0.0154733      
+14  | 226566          | 0.0151308      
+15  | 238138          | 0.014845       
+16  | 247004          | 0.013949       
+17  | 259630          | 0.0134556      
+
+--- Most Balanced Solution (based on optimized metrics) ---
+Cost: $189,609.04525954, Time: 1.73118044h, Wait: 0.03822978h, Agents/Case: 3.59024956, Total Agents: 62
+
+Compared to Simulated Baseline:
+  -> Cost Reduction: -81.65267074%
+  -> Time Reduction: -37.43185455%
+  -> Wait Reduction: 47.99278500%
+  -> Agents/Case Reduction: 15.33759124%
+  -> Total Agents Reduction: -8.77192982%
+
+Best balanced policy saved to optimization_runs/BPIC_2012_W/pop100_gen100_runs3_config_0.7_20251010-201020/best_advanced_policy.json
+Log for the best balanced policy saved to: optimization_runs/BPIC_2012_W/pop100_gen100_runs3_config_0.7_20251010-201020/best_balanced_policy_log.csv

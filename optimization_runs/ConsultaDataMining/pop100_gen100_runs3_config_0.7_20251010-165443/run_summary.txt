@@ -1,0 +1,83 @@
+Run Summary for: pop100_gen100_runs3_config_0.7_20251010-165443
+========================================
+
+--- Run Parameters ---
+Log Path: raw_data/ConsultaDataMining.csv
+Objectives: cost,wait
+Population Size: 100
+Generations: 100
+Runs per Fitness Eval: 3
+Crossover Probability: 0.7
+Mutation Probability: 0.3
+Cores Used: 20
+
+--- Baseline Performance ---
+
+Simulated Baseline (As-is):
+  -> Cost: $107,290.67473682, Time: 83.83757645h, Wait: 9.74142928h, Agents/Case: 5.41929825, Total Agents: 76
+
+Simulated Baseline (Availability):
+  -> Cost: $168,553.93577214, Time: 20.66313304h, Wait: 0.98653672h, Agents/Case: 6.14736842, Total Agents: 318
+
+Simulated Baseline (Cost):
+  -> Cost: $21,865.94408105, Time: 23.78482284h, Wait: 3.56835223h, Agents/Case: 5.26666667, Total Agents: 23
+
+Simulated Baseline (Random):
+  -> Cost: $239,328.28650467, Time: 25.15022071h, Wait: 0.95915213h, Agents/Case: 6.94385965, Total Agents: 372
+
+Simulated Baseline (SPT):
+  -> Cost: $66,807.12615290, Time: 14.72498104h, Wait: 1.22646022h, Agents/Case: 6.24912281, Total Agents: 35
+
+--- Optimization Results ---
+Found 34 non-dominated solutions (the Pareto Front).
+
+--- Pareto Front Solutions ---
+Sol | Cost            | Wait           
+----|------------------------------------
+1   | 26028.4         | 3.57111        
+2   | 31360.8         | 3.56215        
+3   | 31428.8         | 3.54159        
+4   | 32408           | 2.31682        
+5   | 33653.4         | 2.12833        
+6   | 35834.2         | 1.81292        
+7   | 36399.9         | 1.77879        
+8   | 39477           | 1.73001        
+9   | 39617.1         | 1.6413         
+10  | 39888           | 1.62578        
+11  | 40234.5         | 1.58914        
+12  | 41297.8         | 1.56667        
+13  | 41555.1         | 1.52078        
+14  | 42178.5         | 1.47417        
+15  | 43652.2         | 1.47399        
+16  | 47521.8         | 1.43556        
+17  | 47765.8         | 1.41457        
+18  | 48818.1         | 1.40154        
+19  | 49603.1         | 1.37183        
+20  | 49693.9         | 1.27353        
+21  | 77582           | 0.64267        
+22  | 77636.8         | 0.588119       
+23  | 78166.5         | 0.563333       
+24  | 82928.3         | 0.541357       
+25  | 89707           | 0.527247       
+26  | 93177.7         | 0.524655       
+27  | 95733.3         | 0.524167       
+28  | 97563.6         | 0.523825       
+29  | 98467.6         | 0.523638       
+30  | 99296.1         | 0.52182        
+31  | 100765          | 0.497068       
+32  | 100884          | 0.496054       
+33  | 104940          | 0.492341       
+34  | 190455          | 0.462078       
+
+--- Most Balanced Solution (based on optimized metrics) ---
+Cost: $49,864.75507775, Time: 14.86459235h, Wait: 1.54702942h, Agents/Case: 5.03157895, Total Agents: 75
+
+Compared to Simulated Baseline:
+  -> Cost Reduction: 25.36012556%
+  -> Time Reduction: -0.94812554%
+  -> Wait Reduction: -26.13775759%
+  -> Agents/Case Reduction: 19.48343627%
+  -> Total Agents Reduction: -113.20754717%
+
+Best balanced policy saved to optimization_runs/ConsultaDataMining/pop100_gen100_runs3_config_0.7_20251010-165443/best_advanced_policy.json
+Log for the best balanced policy saved to: optimization_runs/ConsultaDataMining/pop100_gen100_runs3_config_0.7_20251010-165443/best_balanced_policy_log.csv
