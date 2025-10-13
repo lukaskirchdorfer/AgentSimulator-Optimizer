@@ -1,0 +1,65 @@
+Run Summary for: pop100_gen100_runs3_config_1.0_20251012-181844
+========================================
+
+--- Run Parameters ---
+Log Path: raw_data/LoanApp_resource_cont.csv
+Objectives: cost,wait
+Population Size: 100
+Generations: 100
+Runs per Fitness Eval: 3
+Crossover Probability: 0.7
+Mutation Probability: 0.3
+Cores Used: 20
+
+--- Baseline Performance ---
+
+Simulated Baseline (As-is):
+  -> Cost: $66,512.48060381, Time: 27.75894145h, Wait: 2.11904603h, Agents/Case: 7.07833333, Total Agents: 10
+
+Simulated Baseline (Availability):
+  -> Cost: $70,857.05459129, Time: 28.07723248h, Wait: 2.18661996h, Agents/Case: 6.56166667, Total Agents: 10
+
+Simulated Baseline (Cost):
+  -> Cost: $57,960.64605731, Time: 42.30477525h, Wait: 3.91870890h, Agents/Case: 5.65666667, Total Agents: 7
+
+Simulated Baseline (Random):
+  -> Cost: $73,182.92068054, Time: 28.87723429h, Wait: 2.19008645h, Agents/Case: 6.50500000, Total Agents: 10
+
+Simulated Baseline (SPT):
+  -> Cost: $79,766.23339973, Time: 33.17912194h, Wait: 2.84261757h, Agents/Case: 6.55666667, Total Agents: 10
+
+--- Optimization Results ---
+Found 16 non-dominated solutions (the Pareto Front).
+
+--- Pareto Front Solutions ---
+Sol | Cost            | Wait           
+----|------------------------------------
+1   | 50734.3         | 3.43336        
+2   | 51559.6         | 2.85637        
+3   | 52504.1         | 2.66564        
+4   | 53190.3         | 2.39362        
+5   | 53848.3         | 2.34404        
+6   | 54587.2         | 2.18688        
+7   | 54929.4         | 2.04255        
+8   | 57530.2         | 1.86116        
+9   | 58829.7         | 1.77747        
+10  | 59022.4         | 1.75543        
+11  | 59320           | 1.74411        
+12  | 59349.6         | 1.66419        
+13  | 61562.5         | 1.61279        
+14  | 61662.3         | 1.52111        
+15  | 62443.2         | 1.47207        
+16  | 65671.9         | 1.45478        
+
+--- Most Balanced Solution (based on optimized metrics) ---
+Cost: $57,589.03048306, Time: 28.57370648h, Wait: 2.28017621h, Agents/Case: 6.41166667, Total Agents: 9
+
+Compared to Simulated Baseline:
+  -> Cost Reduction: 27.80274556%
+  -> Time Reduction: 13.88046214%
+  -> Wait Reduction: 19.78603673%
+  -> Agents/Case Reduction: 2.21148958%
+  -> Total Agents Reduction: 10.00000000%
+
+Best balanced policy saved to optimization_runs/LoanApp_resource_cont/pop100_gen100_runs3_config_1.0_20251012-181844/best_advanced_policy.json
+Log for the best balanced policy saved to: optimization_runs/LoanApp_resource_cont/pop100_gen100_runs3_config_1.0_20251012-181844/best_balanced_policy_log.csv

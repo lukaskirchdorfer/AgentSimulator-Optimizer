@@ -3,6 +3,9 @@ import os
 import re
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set_style("whitegrid")
+sns.set_context("talk")
 
 # =============================================================================
 # --- Parsing and Pareto Front Logic ---
@@ -171,7 +174,6 @@ def find_most_balanced_solution(points_np):
     This replicates the logic from optimizer.py by finding the point
     closest to the origin in a normalized objective space.
     """
-    print(f"points_np: {points_np}")
     if points_np.size == 0:
         return None
     if len(points_np) == 1:
@@ -198,7 +200,7 @@ def main():
     print("--- Starting Evaluation of Optimization Runs ---")
     
     # --- Part 1: Data Aggregation and Preparation ---
-    DATASET = 'LoanApp'
+    DATASET = 'LoanApp_arrivals'
 
     search_dir = f'optimization_runs/{DATASET}'
     
@@ -251,27 +253,34 @@ def main():
         print(f"Using reference point for Hyperarea: Cost={ref_point[0]:.2f}, Wait={ref_point[1]:.2f}")
 
         # --- Plotting ---
-        plt.figure(figsize=(12, 8))
+        plt.figure(figsize=(12, 9))
         colors = ['#ff7f0e', '#1f77b4', '#d62728', '#2ca02c'] 
         markers = ['s', 'o', '^', 'D']
         
         for i, data in enumerate(all_run_data):
+            variant_name = data['variant_name']
+            if variant_name == 'Random Scramble':
+                variant_name = 'Random'
+            elif variant_name == 'Mixed Strategy':
+                variant_name = 'Hybrid'
             front_np = np.array(data['pareto_front'])
             plt.scatter(front_np[:, 0], front_np[:, 1], 
-                        c=colors[i % len(colors)], marker=markers[i % len(markers)], s=50, 
-                        label=f"{data['variant_name']} ({len(front_np)} sols)")
+                        c=colors[i % len(colors)], marker=markers[i % len(markers)], s=150, 
+                        label=f"{variant_name}")
 
-        plt.scatter(pref[:, 0], pref[:, 1], c='black', marker='x', s=100, alpha=0.7,
-                    label=f'Reference Front (PRef) ({len(pref)} sols)', zorder=10)
-        plt.scatter(ref_point[0], ref_point[1], c='purple', marker='X', s=100,
-                    label='Hyperarea Reference Point', zorder=10, alpha=0.8)
+        plt.scatter(pref[:, 0], pref[:, 1], c='black', marker='x', s=150, alpha=0.7,
+                    label=f'Front', zorder=10)
+        plt.scatter(ref_point[0], ref_point[1], c='purple', marker='X', s=150,
+                    label='Hyperarea RP', zorder=10, alpha=0.8)
 
-        plt.title(f'Comparison of Pareto Fronts from Different Mutation Strategies [{DATASET}]')
-        plt.xlabel('Total Cost ($)')
-        plt.ylabel('Average Wait Time (hours)')
+        # plt.title(f'Comparison of Pareto Fronts from Different Mutation Strategies [{DATASET}]')
+        plt.xlabel('Total Cost ($)', fontsize=30)
+        plt.ylabel('Average Wait Time (hours)', fontsize=30)
+        plt.xticks(fontsize=25)
+        plt.yticks(fontsize=25)
         plt.grid(True, linestyle='--', alpha=0.6)
-        plt.legend()
-        plot_path = f'results/pareto_front_comparison_{DATASET}.png'
+        plt.legend(fontsize=25)
+        plot_path = f'results/pareto_front_comparison_{DATASET}.pdf'
         plt.savefig(plot_path)
         print(f"\nSaved comparison plot to '{plot_path}'")
 
@@ -299,6 +308,33 @@ def main():
     print("\n\n--- Most Balanced Solution Improvement Analysis (vs Baselines) ---")
     print("Identifies the solution closest to the 'ideal' point (0,0) in normalized space for each front.\n")
 
+    # First, identify the most balanced solution among all variants
+    pareto_fronts = []
+    for data in all_run_data:
+        pareto_fronts.extend(data['pareto_front'])
+    front_np = np.array(pareto_fronts)
+    balanced_solution = find_most_balanced_solution(front_np)
+    print(f"Balanced solution:")
+    print(f"  - Cost: {round(balanced_solution[0]/1000, 0)}")
+    print(f"  - Wait: {balanced_solution[1]:.2f}")
+    print("")
+
+    # Then, compute the average baseline performance
+    baselines = {}
+    for data in all_run_data:
+        for bname, bvals in data['baselines'].items():
+            if bname not in baselines:
+                baselines[bname] = {'cost': 0, 'wait': 0}
+            baselines[bname]['cost'] += bvals['cost']
+            baselines[bname]['wait'] += bvals['wait']
+    for bname, bvals in baselines.items():
+        baselines[bname]['cost'] /= len(all_run_data)
+        baselines[bname]['wait'] /= len(all_run_data)
+    print(f"Average baseline performance:")
+    for bname, bvals in baselines.items():
+        print(f"  - Baseline '{bname}': Cost: {round(bvals['cost']/1000, 0)}, Wait: {bvals['wait']:.2f}")
+    print("")
+
     for data in all_run_data:
         front_np = np.array(data['pareto_front'])
         balanced_solution = find_most_balanced_solution(front_np)
@@ -306,10 +342,10 @@ def main():
         
         if balanced_solution is not None:
             cost, wait = balanced_solution
-            if not data['baselines']:
+            if not baselines:
                 print("  (No baselines found)")
             else:
-                for bname, bvals in data['baselines'].items():
+                for bname, bvals in baselines.items():
                     cost_improv = (bvals['cost'] - cost) / bvals['cost'] * 100 if bvals.get('cost') else 0.0
                     wait_improv = (bvals['wait'] - wait) / bvals['wait'] * 100 if bvals.get('wait') else 0.0
                     print(f"  - Baseline '{bname}': Cost Impr: {cost_improv:.2f}% | Wait Impr: {wait_improv:.2f}%")
