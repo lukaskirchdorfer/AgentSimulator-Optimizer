@@ -1,0 +1,54 @@
+Run Summary for: pop20_gen10_runs100_config_1.0_20251006-131714
+========================================
+
+--- Run Parameters ---
+Log Path: raw_data/LoanApp.csv.gz
+Objectives: cost,wait
+Population Size: 20
+Generations: 10
+Runs per Fitness Eval: 100
+Crossover Probability: 0.7
+Mutation Probability: 0.3
+Cores Used: 20
+
+--- Baseline Performance ---
+
+Simulated Baseline (As-is):
+  -> Cost: $91,104.15232263, Time: 15.41784356h, Wait: 0.74077849h, Agents/Case: 7.22020000, Total Agents: 19
+
+Simulated Baseline (Availability):
+  -> Cost: $90,984.34280688, Time: 14.42735010h, Wait: 0.58781272h, Agents/Case: 7.02720000, Total Agents: 19
+
+Simulated Baseline (Cost):
+  -> Cost: $62,024.02010206, Time: 28.78764558h, Wait: 2.69049111h, Agents/Case: 4.64635000, Total Agents: 6
+
+--- Optimization Results ---
+Found 11 non-dominated solutions (the Pareto Front).
+
+--- Pareto Front Solutions ---
+Sol | Cost            | Wait           
+----|------------------------------------
+1   | 81787           | 0.880755       
+2   | 83029.4         | 0.865437       
+3   | 83938.7         | 0.729088       
+4   | 85602.8         | 0.724376       
+5   | 85752.6         | 0.7173         
+6   | 85797.8         | 0.704492       
+7   | 85890           | 0.702511       
+8   | 85908.2         | 0.683907       
+9   | 86647.4         | 0.674005       
+10  | 88142.5         | 0.668884       
+11  | 88375.2         | 0.653082       
+
+--- Most Balanced Solution (based on optimized metrics) ---
+Cost: $84,538.39924746, Time: 15.20915716h, Wait: 0.71722695h, Agents/Case: 7.19510000, Total Agents: 18
+
+Compared to Simulated Baseline:
+  -> Cost Reduction: -36.29945158%
+  -> Time Reduction: 47.16776293%
+  -> Wait Reduction: 73.34215483%
+  -> Agents/Case Reduction: -54.85488609%
+  -> Total Agents Reduction: -200.00000000%
+
+Best balanced policy saved to optimization_runs/LoanApp/pop20_gen10_runs100_config_1.0_20251006-131714/best_advanced_policy.json
+Log for the best balanced policy saved to: optimization_runs/LoanApp/pop20_gen10_runs100_config_1.0_20251006-131714/best_balanced_policy_log.csv
