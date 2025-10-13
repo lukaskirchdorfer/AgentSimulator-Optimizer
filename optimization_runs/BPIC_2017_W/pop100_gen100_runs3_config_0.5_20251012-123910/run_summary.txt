@@ -1,0 +1,56 @@
+Run Summary for: pop100_gen100_runs3_config_0.5_20251012-123910
+========================================
+
+--- Run Parameters ---
+Log Path: raw_data/BPIC_2017_W.csv
+Objectives: cost,wait
+Population Size: 100
+Generations: 100
+Runs per Fitness Eval: 3
+Crossover Probability: 0.7
+Mutation Probability: 0.3
+Cores Used: 20
+
+--- Baseline Performance ---
+
+Simulated Baseline (As-is):
+  -> Cost: $666,619.24168080, Time: 4.15070329h, Wait: 0.36967390h, Agents/Case: 3.60820259, Total Agents: 148
+
+Simulated Baseline (Availability):
+  -> Cost: $719,368.61278195, Time: 1.76264689h, Wait: 0.01964477h, Agents/Case: 7.98513625, Total Agents: 148
+
+Simulated Baseline (Cost):
+  -> Cost: $208,351.43478112, Time: 17.75994594h, Wait: 2.54134817h, Agents/Case: 2.21860721, Total Agents: 7
+
+Simulated Baseline (Random):
+  -> Cost: $691,975.04631982, Time: 2.63370197h, Wait: 0.14836320h, Agents/Case: 7.63011285, Total Agents: 148
+
+Simulated Baseline (SPT):
+  -> Cost: $362,531.24864066, Time: 4.42895333h, Wait: 0.47817021h, Agents/Case: 6.18331957, Total Agents: 117
+
+--- Optimization Results ---
+Found 7 non-dominated solutions (the Pareto Front).
+
+--- Pareto Front Solutions ---
+Sol | Cost            | Wait           
+----|------------------------------------
+1   | 485126          | 0.0194693      
+2   | 491810          | 0.0180932      
+3   | 492091          | 0.0170247      
+4   | 492223          | 0.0132549      
+5   | 495352          | 0.0123462      
+6   | 505192          | 0.0114552      
+7   | 513339          | 0.0112137      
+
+--- Most Balanced Solution (based on optimized metrics) ---
+Cost: $501,997.19373702, Time: 1.23306850h, Wait: 0.01468264h, Agents/Case: 5.59521057, Total Agents: 148
+
+Compared to Simulated Baseline:
+  -> Cost Reduction: -38.47004793%
+  -> Time Reduction: 72.15891860%
+  -> Wait Reduction: 96.92941074%
+  -> Agents/Case Reduction: 9.51121795%
+  -> Total Agents Reduction: -26.49572650%
+
+Best balanced policy saved to optimization_runs/BPIC_2017_W/pop100_gen100_runs3_config_0.5_20251012-123910/best_advanced_policy.json
+Log for the best balanced policy saved to: optimization_runs/BPIC_2017_W/pop100_gen100_runs3_config_0.5_20251012-123910/best_balanced_policy_log.csv
