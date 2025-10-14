@@ -1,0 +1,1198 @@
+{
+    "2": {
+        "Approve application": {
+            "2": {
+                "zzz_end": 1.0
+            }
+        },
+        "Return application back to applicant": {
+            "8": {
+                "Applicant completes form": 1.0
+            }
+        },
+        "Reject application": {
+            "2": {
+                "zzz_end": 1.0
+            }
+        },
+        "Cancel application": {
+            "2": {
+                "zzz_end": 1.0
+            }
+        },
+        "Check application form completeness": {
+            "3": {
+                "Return application back to applicant": 0.11893063411146299,
+                "Check credit history": 0.07002086200671695
+            },
+            "4": {
+                "Check credit history": 0.0741217133539487
+            },
+            "12": {
+                "Appraise property": 0.06824786629933455
+            },
+            "1": {
+                "AML check": 0.0765663300106564
+            },
+            "6": {
+                "Check credit history": 0.012995704944438746,
+                "Return application back to applicant": 0.022968587175231675
+            },
+            "9": {
+                "Appraise property": 0.04511515684804812
+            },
+            "10": {
+                "Check credit history": 0.04154480657035017,
+                "Return application back to applicant": 0.02993713604572641
+            },
+            "5": {
+                "Check credit history": 0.033842646849863635
+            },
+            "0": {
+                "Return application back to applicant": 0.07272526196688937,
+                "Check credit history": 0.10537142060249673
+            },
+            "7": {
+                "Return application back to applicant": 0.08056989069979169,
+                "Check credit history": 0.0761365263940979
+            },
+            "11": {
+                "AML check": 0.07090545612094604
+            }
+        },
+        "Check credit history": {
+            "14": {
+                "Assess loan risk": 0.026103917133092017
+            },
+            "1": {
+                "AML check": 0.20631262822246454
+            },
+            "11": {
+                "AML check": 0.07305680970318125
+            },
+            "12": {
+                "Appraise property": 0.039381828464917036
+            },
+            "13": {
+                "Assess loan risk": 0.355696550943097
+            },
+            "9": {
+                "Appraise property": 0.11187390313503758
+            },
+            "15": {
+                "Assess loan risk": 0.17737988953430445
+            },
+            "16": {
+                "Assess loan risk": 0.010194472863906073
+            }
+        }
+    },
+    "3": {
+        "Return application back to applicant": {
+            "8": {
+                "Applicant completes form": 1.0
+            }
+        },
+        "Cancel application": {
+            "3": {
+                "zzz_end": 1.0
+            }
+        },
+        "Reject application": {
+            "3": {
+                "zzz_end": 1.0
+            }
+        },
+        "Approve application": {
+            "3": {
+                "zzz_end": 1.0
+            }
+        },
+        "Check application form completeness": {
+            "1": {
+                "AML check": 0.06816961127890434
+            },
+            "12": {
+                "Appraise property": 0.07624658770870811
+            },
+            "9": {
+                "Appraise property": 0.052904502184020354
+            },
+            "5": {
+                "Check credit history": 0.05160842132616354
+            },
+            "4": {
+                "Check credit history": 0.01372010438613203,
+                "Return application back to applicant": 0.03647009209194871
+            },
+            "2": {
+                "Check credit history": 0.05681925724102242,
+                "Return application back to applicant": 0.08896921122413612
+            },
+            "0": {
+                "Check credit history": 0.09142599764666828,
+                "Return application back to applicant": 0.012863178548801067
+            },
+            "6": {
+                "Check credit history": 0.07934294286430664,
+                "Return application back to applicant": 0.006745157303032654
+            },
+            "11": {
+                "AML check": 0.09558192526170342
+            },
+            "10": {
+                "Check credit history": 0.09481274963033236,
+                "Return application back to applicant": 0.024033889086863002
+            },
+            "7": {
+                "Return application back to applicant": 0.07876296527406368,
+                "Check credit history": 0.05091146121519176
+            },
+            "3": {
+                "Check credit history": 0.020611945728001443
+            }
+        },
+        "Check credit history": {
+            "11": {
+                "AML check": 0.09726697664862188
+            },
+            "1": {
+                "AML check": 0.09727138531536854
+            },
+            "9": {
+                "Appraise property": 0.06436888688088187
+            },
+            "12": {
+                "Appraise property": 0.046464424748957546
+            },
+            "14": {
+                "Assess loan risk": 0.09976150486367265
+            },
+            "15": {
+                "Assess loan risk": 0.3056345536466174
+            },
+            "16": {
+                "Assess loan risk": 0.23015728783781503
+            },
+            "13": {
+                "Assess loan risk": 0.05907498005806526
+            }
+        }
+    },
+    "8": {
+        "Applicant completes form": {
+            "0": {
+                "Check application form completeness": 0.18623538971837492
+            },
+            "4": {
+                "Check application form completeness": 0.18216296002820434
+            },
+            "7": {
+                "Check application form completeness": 0.15066439487174618
+            },
+            "3": {
+                "Check application form completeness": 0.09617636504570982
+            },
+            "10": {
+                "Check application form completeness": 0.14134398476812232
+            },
+            "6": {
+                "Check application form completeness": 0.12311559421840644
+            },
+            "2": {
+                "Check application form completeness": 0.07225855733651579
+            },
+            "5": {
+                "Check application form completeness": 0.0480427540129203
+            }
+        }
+    },
+    "0": {
+        "Approve application": {
+            "0": {
+                "zzz_end": 1.0
+            }
+        },
+        "Return application back to applicant": {
+            "8": {
+                "Applicant completes form": 1.0
+            }
+        },
+        "Cancel application": {
+            "0": {
+                "zzz_end": 1.0
+            }
+        },
+        "Reject application": {
+            "0": {
+                "zzz_end": 1.0
+            }
+        },
+        "Check application form completeness": {
+            "1": {
+                "AML check": 0.07225858738559787
+            },
+            "3": {
+                "Return application back to applicant": 0.06494544518127882,
+                "Check credit history": 0.07453927897585123
+            },
+            "11": {
+                "AML check": 0.06212883832651356
+            },
+            "12": {
+                "Appraise property": 0.0524831895389217
+            },
+            "9": {
+                "Appraise property": 0.0062887169136267166
+            },
+            "10": {
+                "Check credit history": 0.08049883198283533,
+                "Return application back to applicant": 0.05530604381676137
+            },
+            "7": {
+                "Check credit history": 0.0522812650818822,
+                "Return application back to applicant": 0.00699494976884677
+            },
+            "6": {
+                "Check credit history": 0.0039594364956508634,
+                "Return application back to applicant": 0.08174963630104365
+            },
+            "5": {
+                "Check credit history": 0.06809088873430044,
+                "Return application back to applicant": 0.023711460024714595
+            },
+            "2": {
+                "Check credit history": 0.0809690894127333,
+                "Return application back to applicant": 0.08526350625999098
+            },
+            "4": {
+                "Check credit history": 0.049474253904741285,
+                "Return application back to applicant": 0.07905658189470925
+            }
+        },
+        "Check credit history": {
+            "1": {
+                "AML check": 0.24301731852137162
+            },
+            "13": {
+                "Assess loan risk": 0.05845406093120865
+            },
+            "11": {
+                "AML check": 0.0682136552165291
+            },
+            "9": {
+                "Appraise property": 0.17611096245322358
+            },
+            "12": {
+                "Appraise property": 0.03541057200501284
+            },
+            "14": {
+                "Assess loan risk": 0.1019572724242736
+            },
+            "16": {
+                "Assess loan risk": 0.22343741658768365
+            },
+            "15": {
+                "Assess loan risk": 0.09339874186069679
+            }
+        }
+    },
+    "1": {
+        "AML check": {
+            "9": {
+                "Appraise property": 0.0418600996057333
+            },
+            "4": {
+                "Check credit history": 0.04018835751624429
+            },
+            "15": {
+                "Assess loan risk": 0.1148379252480975
+            },
+            "5": {
+                "Check credit history": 0.02791419493103588
+            },
+            "10": {
+                "Check credit history": 0.14368515173568489
+            },
+            "7": {
+                "Check credit history": 0.13324615046910665
+            },
+            "14": {
+                "Assess loan risk": 0.15451817905916812
+            },
+            "6": {
+                "Check credit history": 0.009516552265211812
+            },
+            "12": {
+                "Appraise property": 0.07055692149803823
+            },
+            "3": {
+                "Check credit history": 0.002151889054676158
+            },
+            "16": {
+                "Assess loan risk": 0.08718385175465035
+            },
+            "13": {
+                "Assess loan risk": 0.10237277760438838
+            },
+            "0": {
+                "Check credit history": 0.0019114396335340978
+            },
+            "2": {
+                "Check credit history": 0.07005650962443019
+            }
+        }
+    },
+    "9": {
+        "Appraise property": {
+            "2": {
+                "Check credit history": 0.0237293875949687
+            },
+            "10": {
+                "Check credit history": 0.046122650959377155
+            },
+            "5": {
+                "Check credit history": 0.08790994365944023
+            },
+            "11": {
+                "AML check": 0.07909977929155904
+            },
+            "15": {
+                "Assess loan risk": 0.007899652605798528
+            },
+            "4": {
+                "Check credit history": 0.1256100276415301
+            },
+            "0": {
+                "Check credit history": 0.1397382335402647
+            },
+            "13": {
+                "Assess loan risk": 0.050254516035981044
+            },
+            "16": {
+                "Assess loan risk": 0.052171724406529695
+            },
+            "14": {
+                "Assess loan risk": 0.055360811500323195
+            },
+            "1": {
+                "AML check": 0.057674843050901224
+            },
+            "7": {
+                "Check credit history": 0.08393982687319594
+            },
+            "3": {
+                "Check credit history": 0.10079178330726457
+            },
+            "6": {
+                "Check credit history": 0.08969681953286576
+            }
+        }
+    },
+    "14": {
+        "Assess loan risk": {
+            "15": {
+                "Design loan offer": 0.11619419063877127
+            },
+            "13": {
+                "Design loan offer": 0.13053099506710347
+            },
+            "16": {
+                "Design loan offer": 0.14383971177119376
+            },
+            "6": {
+                "Reject application": 0.04003405153467794
+            },
+            "3": {
+                "Reject application": 0.0654620075289248
+            },
+            "5": {
+                "Reject application": 0.11110427924699358
+            },
+            "7": {
+                "Reject application": 0.13759502442926233
+            },
+            "2": {
+                "Reject application": 0.14619325695541918
+            },
+            "14": {
+                "Design loan offer": 0.0033161904425436863
+            },
+            "4": {
+                "Reject application": 0.04140194849125172
+            },
+            "10": {
+                "Reject application": 0.0322632433739827
+            },
+            "0": {
+                "Reject application": 0.03206510051987554
+            }
+        },
+        "Design loan offer": {
+            "17": {
+                "Approve loan offer": 0.31723069838054674
+            },
+            "18": {
+                "Approve loan offer": 0.6827693016194533
+            }
+        }
+    },
+    "15": {
+        "Design loan offer": {
+            "17": {
+                "Approve loan offer": 0.4961867097017538
+            },
+            "18": {
+                "Approve loan offer": 0.5038132902982462
+            }
+        },
+        "Assess loan risk": {
+            "16": {
+                "Design loan offer": 0.10491338773919359
+            },
+            "13": {
+                "Design loan offer": 0.06841656216225402
+            },
+            "3": {
+                "Reject application": 0.07105471404707157
+            },
+            "14": {
+                "Design loan offer": 0.02866336754123437
+            },
+            "10": {
+                "Reject application": 0.07338153248309666
+            },
+            "15": {
+                "Design loan offer": 0.06233975406283698
+            },
+            "2": {
+                "Reject application": 0.13484172527842428
+            },
+            "0": {
+                "Reject application": 0.09925850724665465
+            },
+            "5": {
+                "Reject application": 0.10004095237065296
+            },
+            "7": {
+                "Reject application": 0.01641542404627862
+            },
+            "4": {
+                "Reject application": 0.14699433883816604
+            },
+            "6": {
+                "Reject application": 0.0936797341841362
+            }
+        }
+    },
+    "17": {
+        "Approve loan offer": {
+            "3": {
+                "Cancel application": 0.08501218846824879,
+                "Approve application": 0.10556004957514908
+            },
+            "6": {
+                "Approve application": 0.04948929522056938,
+                "Cancel application": 0.02228555021444021
+            },
+            "10": {
+                "Cancel application": 0.001617829623605852,
+                "Approve application": 0.011134324629041285
+            },
+            "5": {
+                "Approve application": 0.07477711555946036,
+                "Cancel application": 0.11284055574923044
+            },
+            "4": {
+                "Approve application": 0.06684353941894615,
+                "Cancel application": 0.047754472369529115
+            },
+            "7": {
+                "Approve application": 0.09284250023260114,
+                "Cancel application": 0.10040459719669449
+            },
+            "0": {
+                "Cancel application": 0.040741133846396306,
+                "Approve application": 0.038347720996197
+            },
+            "2": {
+                "Cancel application": 0.08140380892315051,
+                "Approve application": 0.06894531797673986
+            }
+        }
+    },
+    "4": {
+        "Reject application": {
+            "4": {
+                "zzz_end": 1.0
+            }
+        },
+        "Approve application": {
+            "4": {
+                "zzz_end": 1.0
+            }
+        },
+        "Cancel application": {
+            "4": {
+                "zzz_end": 1.0
+            }
+        },
+        "Return application back to applicant": {
+            "8": {
+                "Applicant completes form": 1.0
+            }
+        },
+        "Check credit history": {
+            "12": {
+                "Appraise property": 0.1449467773189001
+            },
+            "11": {
+                "AML check": 0.0775635743250471
+            },
+            "1": {
+                "AML check": 0.14803671009324096
+            },
+            "14": {
+                "Assess loan risk": 0.03683665448491321
+            },
+            "9": {
+                "Appraise property": 0.11651017255917351
+            },
+            "13": {
+                "Assess loan risk": 0.12876021425471737
+            },
+            "15": {
+                "Assess loan risk": 0.1910521714286882
+            },
+            "16": {
+                "Assess loan risk": 0.15629372553531953
+            }
+        },
+        "Check application form completeness": {
+            "10": {
+                "Return application back to applicant": 0.09511926388638756,
+                "Check credit history": 0.11674918166810197
+            },
+            "12": {
+                "Appraise property": 0.007891941784164759
+            },
+            "6": {
+                "Return application back to applicant": 0.007695469120911948,
+                "Check credit history": 0.0964950852575934
+            },
+            "2": {
+                "Return application back to applicant": 0.09369634468381183,
+                "Check credit history": 0.10488065280438721
+            },
+            "11": {
+                "AML check": 0.02568535185341021
+            },
+            "9": {
+                "Appraise property": 0.03586640255622475
+            },
+            "1": {
+                "AML check": 0.0919827228870352
+            },
+            "0": {
+                "Check credit history": 0.04567318521772595
+            },
+            "3": {
+                "Return application back to applicant": 0.0009395384186719557,
+                "Check credit history": 0.066784126055801
+            },
+            "7": {
+                "Check credit history": 0.03542919982235938,
+                "Return application back to applicant": 0.011519829306055154
+            },
+            "5": {
+                "Check credit history": 0.02659248340684536,
+                "Return application back to applicant": 0.019462881716358203
+            },
+            "4": {
+                "Check credit history": 0.1175363395541542
+            }
+        }
+    },
+    "12": {
+        "Appraise property": {
+            "15": {
+                "Assess loan risk": 0.10671073075055845
+            },
+            "0": {
+                "Check credit history": 0.014864252892617056
+            },
+            "13": {
+                "Assess loan risk": 0.04324853064851879
+            },
+            "14": {
+                "Assess loan risk": 0.08929935274955501
+            },
+            "11": {
+                "AML check": 0.06522567282576466
+            },
+            "6": {
+                "Check credit history": 0.052112300122671505
+            },
+            "16": {
+                "Assess loan risk": 0.049289192025949675
+            },
+            "1": {
+                "AML check": 0.11062291119944705
+            },
+            "5": {
+                "Check credit history": 0.06651251611044118
+            },
+            "4": {
+                "Check credit history": 0.04712372231147787
+            },
+            "3": {
+                "Check credit history": 0.10279778433957762
+            },
+            "2": {
+                "Check credit history": 0.04871456231143612
+            },
+            "7": {
+                "Check credit history": 0.062286679039226425
+            },
+            "10": {
+                "Check credit history": 0.14119179267275841
+            }
+        }
+    },
+    "16": {
+        "Design loan offer": {
+            "18": {
+                "Approve loan offer": 0.5192307692307693
+            },
+            "17": {
+                "Approve loan offer": 0.4807692307692308
+            }
+        },
+        "Assess loan risk": {
+            "13": {
+                "Design loan offer": 0.21544715447154472
+            },
+            "4": {
+                "Reject application": 0.056910569105691054
+            },
+            "15": {
+                "Design loan offer": 0.21951219512195122
+            },
+            "14": {
+                "Design loan offer": 0.1991869918699187
+            },
+            "0": {
+                "Reject application": 0.04065040650406504
+            },
+            "16": {
+                "Design loan offer": 0.032520325203252036
+            },
+            "10": {
+                "Reject application": 0.036585365853658534
+            },
+            "2": {
+                "Reject application": 0.028455284552845527
+            },
+            "5": {
+                "Reject application": 0.04065040650406504
+            },
+            "3": {
+                "Reject application": 0.036585365853658534
+            },
+            "7": {
+                "Reject application": 0.06097560975609756
+            },
+            "6": {
+                "Reject application": 0.032520325203252036
+            }
+        }
+    },
+    "18": {
+        "Approve loan offer": {
+            "7": {
+                "Approve application": 0.07316791200962483,
+                "Cancel application": 0.053303758568276016
+            },
+            "3": {
+                "Cancel application": 0.06328206829392737,
+                "Approve application": 0.01921968156987244
+            },
+            "2": {
+                "Approve application": 0.08633912113809582,
+                "Cancel application": 0.07941059518866547
+            },
+            "0": {
+                "Approve application": 0.092352686242326,
+                "Cancel application": 0.10432076476718405
+            },
+            "10": {
+                "Approve application": 0.0463168384615547,
+                "Cancel application": 0.0028651316915427193
+            },
+            "5": {
+                "Cancel application": 0.10857406023012928,
+                "Approve application": 0.10348158051443591
+            },
+            "4": {
+                "Cancel application": 0.06813007441653501,
+                "Approve application": 0.04636802610313429
+            },
+            "6": {
+                "Cancel application": 0.020643995653643235,
+                "Approve application": 0.032223705151052835
+            }
+        }
+    },
+    "7": {
+        "Approve application": {
+            "7": {
+                "zzz_end": 1.0
+            }
+        },
+        "Reject application": {
+            "7": {
+                "zzz_end": 1.0
+            }
+        },
+        "Cancel application": {
+            "7": {
+                "zzz_end": 1.0
+            }
+        },
+        "Return application back to applicant": {
+            "8": {
+                "Applicant completes form": 1.0
+            }
+        },
+        "Check application form completeness": {
+            "9": {
+                "Appraise property": 0.063390777024952
+            },
+            "1": {
+                "AML check": 0.07106106240009562
+            },
+            "11": {
+                "AML check": 0.027579558413134267
+            },
+            "0": {
+                "Return application back to applicant": 0.04622343887701283,
+                "Check credit history": 0.09444839252593867
+            },
+            "4": {
+                "Return application back to applicant": 0.12639315743543897,
+                "Check credit history": 0.06751442453227939
+            },
+            "3": {
+                "Check credit history": 0.12630573192476455,
+                "Return application back to applicant": 0.03946288520099886
+            },
+            "2": {
+                "Return application back to applicant": 0.01778920836109985,
+                "Check credit history": 0.04865048656710049
+            },
+            "12": {
+                "Appraise property": 0.00991261121458712
+            },
+            "10": {
+                "Check credit history": 0.05234027000545112,
+                "Return application back to applicant": 0.024048059646908558
+            },
+            "6": {
+                "Check credit history": 0.11157388523986475,
+                "Return application back to applicant": 0.031105870808436995
+            },
+            "5": {
+                "Check credit history": 0.03688556752895327,
+                "Return application back to applicant": 0.005314612292982558
+            }
+        },
+        "Check credit history": {
+            "12": {
+                "Appraise property": 0.2
+            },
+            "14": {
+                "Assess loan risk": 0.1
+            },
+            "13": {
+                "Assess loan risk": 0.09166666666666666
+            },
+            "1": {
+                "AML check": 0.20833333333333334
+            },
+            "15": {
+                "Assess loan risk": 0.09166666666666666
+            },
+            "16": {
+                "Assess loan risk": 0.041666666666666664
+            },
+            "11": {
+                "AML check": 0.15
+            },
+            "9": {
+                "Appraise property": 0.11666666666666667
+            }
+        }
+    },
+    "5": {
+        "Approve application": {
+            "5": {
+                "zzz_end": 1.0
+            }
+        },
+        "Cancel application": {
+            "5": {
+                "zzz_end": 1.0
+            }
+        },
+        "Reject application": {
+            "5": {
+                "zzz_end": 1.0
+            }
+        },
+        "Return application back to applicant": {
+            "8": {
+                "Applicant completes form": 1.0
+            }
+        },
+        "Check application form completeness": {
+            "6": {
+                "Return application back to applicant": 0.02097902097902098,
+                "Check credit history": 0.03496503496503497
+            },
+            "4": {
+                "Check credit history": 0.06993006993006994
+            },
+            "9": {
+                "Appraise property": 0.11188811188811189
+            },
+            "1": {
+                "AML check": 0.1888111888111888
+            },
+            "2": {
+                "Check credit history": 0.04895104895104895,
+                "Return application back to applicant": 0.02097902097902098
+            },
+            "12": {
+                "Appraise property": 0.1258741258741259
+            },
+            "7": {
+                "Check credit history": 0.06993006993006994,
+                "Return application back to applicant": 0.02097902097902098
+            },
+            "11": {
+                "AML check": 0.0979020979020979
+            },
+            "3": {
+                "Check credit history": 0.04195804195804196,
+                "Return application back to applicant": 0.013986013986013986
+            },
+            "0": {
+                "Check credit history": 0.06293706293706294,
+                "Return application back to applicant": 0.02097902097902098
+            },
+            "10": {
+                "Check credit history": 0.027972027972027972,
+                "Return application back to applicant": 0.02097902097902098
+            }
+        },
+        "Check credit history": {
+            "12": {
+                "Appraise property": 0.10737106017114768
+            },
+            "11": {
+                "AML check": 0.02716180892625051
+            },
+            "16": {
+                "Assess loan risk": 0.1756442148599985
+            },
+            "14": {
+                "Assess loan risk": 0.11636428139029033
+            },
+            "15": {
+                "Assess loan risk": 0.22111719522124643
+            },
+            "9": {
+                "Appraise property": 0.0941154930208448
+            },
+            "1": {
+                "AML check": 0.1357623798426171
+            },
+            "13": {
+                "Assess loan risk": 0.12246356656760478
+            }
+        }
+    },
+    "6": {
+        "Return application back to applicant": {
+            "8": {
+                "Applicant completes form": 1.0
+            }
+        },
+        "Approve application": {
+            "6": {
+                "zzz_end": 1.0
+            }
+        },
+        "Cancel application": {
+            "6": {
+                "zzz_end": 1.0
+            }
+        },
+        "Reject application": {
+            "6": {
+                "zzz_end": 1.0
+            }
+        },
+        "Check application form completeness": {
+            "9": {
+                "Appraise property": 0.03743680725522272
+            },
+            "3": {
+                "Check credit history": 0.08538905293497542,
+                "Return application back to applicant": 0.01622120607560269
+            },
+            "5": {
+                "Check credit history": 0.03601739438350574,
+                "Return application back to applicant": 0.02135494014340476
+            },
+            "10": {
+                "Check credit history": 0.043422738125292,
+                "Return application back to applicant": 0.09374259230978252
+            },
+            "12": {
+                "Appraise property": 0.05258510865938481
+            },
+            "1": {
+                "AML check": 0.08255389795430047
+            },
+            "11": {
+                "AML check": 0.07086515403884307
+            },
+            "4": {
+                "Check credit history": 0.007242905900905487,
+                "Return application back to applicant": 0.07789558417277563
+            },
+            "2": {
+                "Check credit history": 0.0879445424113939,
+                "Return application back to applicant": 0.09689478759974474
+            },
+            "0": {
+                "Check credit history": 0.04877269139766767,
+                "Return application back to applicant": 0.062153263159657926
+            },
+            "7": {
+                "Return application back to applicant": 0.07559154873164535,
+                "Check credit history": 0.00391578474589496
+            }
+        },
+        "Check credit history": {
+            "14": {
+                "Assess loan risk": 0.14198505673125636
+            },
+            "1": {
+                "AML check": 0.15736354746215805
+            },
+            "11": {
+                "AML check": 0.1424657537915015
+            },
+            "12": {
+                "Appraise property": 0.12610039047084926
+            },
+            "9": {
+                "Appraise property": 0.1370953130454064
+            },
+            "15": {
+                "Assess loan risk": 0.10841870218180316
+            },
+            "16": {
+                "Assess loan risk": 0.044911030307492175
+            },
+            "13": {
+                "Assess loan risk": 0.14166020600953316
+            }
+        }
+    },
+    "10": {
+        "Return application back to applicant": {
+            "8": {
+                "Applicant completes form": 1.0
+            }
+        },
+        "Cancel application": {
+            "10": {
+                "zzz_end": 1.0
+            }
+        },
+        "Approve application": {
+            "10": {
+                "zzz_end": 1.0
+            }
+        },
+        "Reject application": {
+            "10": {
+                "zzz_end": 1.0
+            }
+        },
+        "Check credit history": {
+            "11": {
+                "AML check": 0.14319564500813553
+            },
+            "12": {
+                "Appraise property": 0.14940401031772457
+            },
+            "16": {
+                "Assess loan risk": 0.03612144536227539
+            },
+            "15": {
+                "Assess loan risk": 0.17078870361721285
+            },
+            "1": {
+                "AML check": 0.08880164217398871
+            },
+            "9": {
+                "Appraise property": 0.15126868679696379
+            },
+            "14": {
+                "Assess loan risk": 0.09980457788574912
+            },
+            "13": {
+                "Assess loan risk": 0.16061528883795007
+            }
+        },
+        "Check application form completeness": {
+            "9": {
+                "Appraise property": 0.10158487100353066
+            },
+            "11": {
+                "AML check": 0.004143185828896342
+            },
+            "12": {
+                "Appraise property": 0.031567017467949585
+            },
+            "2": {
+                "Check credit history": 0.10533547283356733,
+                "Return application back to applicant": 0.08205347984081815
+            },
+            "4": {
+                "Return application back to applicant": 0.10555578849158985,
+                "Check credit history": 0.008581052585600655
+            },
+            "0": {
+                "Check credit history": 0.028093053364861786,
+                "Return application back to applicant": 0.09628344580989345
+            },
+            "7": {
+                "Return application back to applicant": 0.05226959271365431,
+                "Check credit history": 0.0427244193249921
+            },
+            "5": {
+                "Return application back to applicant": 0.0937948264935546,
+                "Check credit history": 0.04762926020344236
+            },
+            "3": {
+                "Check credit history": 0.058666124408890866
+            },
+            "1": {
+                "AML check": 0.029815055993311294
+            },
+            "6": {
+                "Check credit history": 0.023006024047437533,
+                "Return application back to applicant": 0.08889732958800914
+            }
+        }
+    },
+    "13": {
+        "Design loan offer": {
+            "17": {
+                "Approve loan offer": 0.32506193470381
+            },
+            "18": {
+                "Approve loan offer": 0.6749380652961899
+            }
+        },
+        "Assess loan risk": {
+            "14": {
+                "Design loan offer": 0.21428571428571427
+            },
+            "7": {
+                "Reject application": 0.03571428571428571
+            },
+            "16": {
+                "Design loan offer": 0.20634920634920634
+            },
+            "5": {
+                "Reject application": 0.047619047619047616
+            },
+            "15": {
+                "Design loan offer": 0.20238095238095238
+            },
+            "0": {
+                "Reject application": 0.04365079365079365
+            },
+            "3": {
+                "Reject application": 0.047619047619047616
+            },
+            "2": {
+                "Reject application": 0.04365079365079365
+            },
+            "13": {
+                "Design loan offer": 0.01984126984126984
+            },
+            "6": {
+                "Reject application": 0.04365079365079365
+            },
+            "4": {
+                "Reject application": 0.06349206349206349
+            },
+            "10": {
+                "Reject application": 0.031746031746031744
+            }
+        }
+    },
+    "11": {
+        "AML check": {
+            "13": {
+                "Assess loan risk": 0.03085942228639466
+            },
+            "16": {
+                "Assess loan risk": 0.004785355018467272
+            },
+            "6": {
+                "Check credit history": 0.15675600498205997
+            },
+            "14": {
+                "Assess loan risk": 0.07067151637366015
+            },
+            "9": {
+                "Appraise property": 0.08063723922657616
+            },
+            "7": {
+                "Check credit history": 0.008774560697182094
+            },
+            "5": {
+                "Check credit history": 0.03985416168403171
+            },
+            "12": {
+                "Appraise property": 0.15042734413203374
+            },
+            "10": {
+                "Check credit history": 0.05533716821491975
+            },
+            "15": {
+                "Assess loan risk": 0.17674152703220047
+            },
+            "4": {
+                "Check credit history": 0.06865240097988148
+            },
+            "2": {
+                "Check credit history": 0.04079014231577695
+            },
+            "3": {
+                "Check credit history": 0.07335981566181084
+            },
+            "0": {
+                "Check credit history": 0.042353341395004865
+            }
+        }
+    }
+}

@@ -40,10 +40,10 @@ run_script() {
 echo "Starting dataset experiments..."
 
 # ACR dataset
-run_script "jobs/caise/ACR/all.sh" "ACR"
+# run_script "jobs/caise/ACR/all.sh" "ACR"
 
-# BPI12W dataset  
-run_script "jobs/caise/BPI12W/all.sh" "BPI12W"
+# # BPI12W dataset  
+# run_script "jobs/caise/BPI12W/all.sh" "BPI12W"
 
 # Confidential_1000 dataset
 run_script "jobs/caise/Confidential_1000/all.sh" "Confidential_1000"
