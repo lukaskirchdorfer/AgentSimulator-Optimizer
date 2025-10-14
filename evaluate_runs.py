@@ -200,7 +200,7 @@ def main():
     print("--- Starting Evaluation of Optimization Runs ---")
     
     # --- Part 1: Data Aggregation and Preparation ---
-    DATASET = 'LoanApp_arrivals'
+    DATASET = 'ConsultaDataMining'
 
     search_dir = f'optimization_runs/{DATASET}'
     
