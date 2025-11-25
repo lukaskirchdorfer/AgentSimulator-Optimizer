@@ -25,21 +25,33 @@ The main script is `optimize_pro_plus.py`.
 You need to specify the following parameters regarding the input event log:
 
 `--log_path`: path to the entire log which you need to store in the folder raw_data
+
 `--case_id`: name of the case_id column
+
 `--activity_name`: name of the activity column
+
 `--resource_name`: name of the resource column
+
 `--end_timestamp`: name of the end timestamp column
+
 `--start_timestamp`: name of the start timestamp column
+
 `--costs_path`:
 
 Then, you can specify the following parameters for the optimization:
 
 `--pop_size`: size of the population
+
 `--num_gen`: number of generations for the GA
+
 `--runs_per_fitness`: number of simulations per policy evaluation
+
 `--mut_prob`: mutation probability
+
 `--cx_prob`: crossover probability
+
 `--objectives`: objectives to optimize (e.g., "cost,wait")
+
 `--mutation_choice`: mutation variant (0.5 for Guided, 0.7 for Greedy, 1 for Random, empty for Hybrid)
 
 All commands to run the datasets evaluated in our paper are in jobs/caise/.
