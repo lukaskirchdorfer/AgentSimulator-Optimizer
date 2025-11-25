@@ -163,7 +163,5 @@ cython_debug/
 *.pyc
 *.out
 
-/optimization_runs/
 /simulated_data/
-/raw_data/
 /raw_data_old/

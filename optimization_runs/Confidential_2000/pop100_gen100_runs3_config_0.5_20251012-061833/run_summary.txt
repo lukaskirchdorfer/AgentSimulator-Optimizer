@@ -1,0 +1,53 @@
+Run Summary for: pop100_gen100_runs3_config_0.5_20251012-061833
+========================================
+
+--- Run Parameters ---
+Log Path: raw_data/Confidential_2000.csv
+Objectives: cost,wait
+Population Size: 100
+Generations: 100
+Runs per Fitness Eval: 3
+Crossover Probability: 0.7
+Mutation Probability: 0.3
+Cores Used: 20
+
+--- Baseline Performance ---
+
+Simulated Baseline (As-is):
+  -> Cost: $304,502.89443235, Time: 58.45917335h, Wait: 1.21324477h, Agents/Case: 17.43750000, Total Agents: 26
+
+Simulated Baseline (Availability):
+  -> Cost: $251,896.43055656, Time: 58.99840458h, Wait: 1.25333073h, Agents/Case: 15.48916667, Total Agents: 26
+
+Simulated Baseline (Cost):
+  -> Cost: $241,646.68534111, Time: 69.09542388h, Wait: 1.51604161h, Agents/Case: 14.40250000, Total Agents: 18
+
+Simulated Baseline (Random):
+  -> Cost: $280,477.22749417, Time: 55.44628769h, Wait: 1.16145478h, Agents/Case: 16.80083333, Total Agents: 26
+
+Simulated Baseline (SPT):
+  -> Cost: $237,464.02185592, Time: 57.39832436h, Wait: 1.21355417h, Agents/Case: 15.25666667, Total Agents: 21
+
+--- Optimization Results ---
+Found 4 non-dominated solutions (the Pareto Front).
+
+--- Pareto Front Solutions ---
+Sol | Cost            | Wait           
+----|------------------------------------
+1   | 199178          | 0.848891       
+2   | 202328          | 0.832214       
+3   | 206132          | 0.77644        
+4   | 224264          | 0.776411       
+
+--- Most Balanced Solution (based on optimized metrics) ---
+Cost: $215,891.52846374, Time: 51.81724942h, Wait: 1.10745043h, Agents/Case: 15.65916667, Total Agents: 26
+
+Compared to Simulated Baseline:
+  -> Cost Reduction: 9.08453130%
+  -> Time Reduction: 9.72341093%
+  -> Wait Reduction: 8.74322246%
+  -> Agents/Case Reduction: -2.63819095%
+  -> Total Agents Reduction: -23.80952381%
+
+Best balanced policy saved to optimization_runs/Confidential_2000/pop100_gen100_runs3_config_0.5_20251012-061833/best_advanced_policy.json
+Log for the best balanced policy saved to: optimization_runs/Confidential_2000/pop100_gen100_runs3_config_0.5_20251012-061833/best_balanced_policy_log.csv

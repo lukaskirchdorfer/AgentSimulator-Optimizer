@@ -1,0 +1,60 @@
+Run Summary for: pop100_gen100_runs3_config_0.7_20251012-062458
+========================================
+
+--- Run Parameters ---
+Log Path: raw_data/Confidential_2000.csv
+Objectives: cost,wait
+Population Size: 100
+Generations: 100
+Runs per Fitness Eval: 3
+Crossover Probability: 0.7
+Mutation Probability: 0.3
+Cores Used: 20
+
+--- Baseline Performance ---
+
+Simulated Baseline (As-is):
+  -> Cost: $328,344.47089129, Time: 53.34662453h, Wait: 1.02515785h, Agents/Case: 17.55166667, Total Agents: 26
+
+Simulated Baseline (Availability):
+  -> Cost: $254,642.80429733, Time: 51.11592839h, Wait: 1.04378446h, Agents/Case: 15.46750000, Total Agents: 26
+
+Simulated Baseline (Cost):
+  -> Cost: $251,768.36873681, Time: 53.72244613h, Wait: 1.10356280h, Agents/Case: 14.37166667, Total Agents: 18
+
+Simulated Baseline (Random):
+  -> Cost: $303,766.58472451, Time: 51.44387457h, Wait: 1.00743424h, Agents/Case: 16.86250000, Total Agents: 26
+
+Simulated Baseline (SPT):
+  -> Cost: $240,001.42216846, Time: 52.24349305h, Wait: 1.08384264h, Agents/Case: 15.33500000, Total Agents: 21
+
+--- Optimization Results ---
+Found 11 non-dominated solutions (the Pareto Front).
+
+--- Pareto Front Solutions ---
+Sol | Cost            | Wait           
+----|------------------------------------
+1   | 210249          | 0.959703       
+2   | 210363          | 0.850759       
+3   | 211037          | 0.80594        
+4   | 211497          | 0.795601       
+5   | 212473          | 0.773637       
+6   | 213352          | 0.751303       
+7   | 214354          | 0.74947        
+8   | 217062          | 0.718613       
+9   | 218522          | 0.718542       
+10  | 220124          | 0.704941       
+11  | 222614          | 0.67457        
+
+--- Most Balanced Solution (based on optimized metrics) ---
+Cost: $219,509.40050528, Time: 39.97245664h, Wait: 0.79312321h, Agents/Case: 15.94666667, Total Agents: 26
+
+Compared to Simulated Baseline:
+  -> Cost Reduction: 8.53829176%
+  -> Time Reduction: 23.48816226%
+  -> Wait Reduction: 26.82302984%
+  -> Agents/Case Reduction: -3.98869688%
+  -> Total Agents Reduction: -22.22222222%
+
+Best balanced policy saved to optimization_runs/Confidential_2000/pop100_gen100_runs3_config_0.7_20251012-062458/best_advanced_policy.json
+Log for the best balanced policy saved to: optimization_runs/Confidential_2000/pop100_gen100_runs3_config_0.7_20251012-062458/best_balanced_policy_log.csv

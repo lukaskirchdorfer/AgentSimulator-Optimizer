@@ -144,6 +144,7 @@ class BusinessProcessModel(Model):
         for case in cases:
             current_active_agents, case_ended = self.contractor_agent.get_potential_agents(case=case)
             if case_ended:
+                # print(f"Case {case.case_id} ended")
                 self.past_cases.append(case)
                 cases.remove(case)
                 if len(self.sampled_case_starting_times) == 1 and len(cases) == 0:

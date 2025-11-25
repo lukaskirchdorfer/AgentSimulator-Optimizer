@@ -1,18 +1,19 @@
-# evaluate_runs.py (Version 6 - With Ground Truth & Balanced Improvement)
-
+# evaluate_runs.py (Version 7 - Dynamic Baselines)
 import os
 import re
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set_style("whitegrid")
+sns.set_context("talk")
 
 # =============================================================================
 # --- Parsing and Pareto Front Logic ---
 # =============================================================================
 
 def parse_run_summary(file_path):
-    """Parses a run_summary.txt file to extract key information."""
-    # MODIFIED: Added 'ground_truth' to the data structure
-    data = {'variant_name': '', 'baseline': {}, 'ground_truth': {}, 'pareto_front': []}
+    """Parses a run_summary.txt file to extract key information with dynamic baselines."""
+    data = {'variant_name': '', 'baselines': {}, 'pareto_front': []}
 
     with open(file_path, 'r') as f:
         lines = f.readlines()
@@ -24,64 +25,64 @@ def parse_run_summary(file_path):
     elif 'config_mix' in file_path: data['variant_name'] = 'Mixed Strategy'
     else: data['variant_name'] = os.path.basename(os.path.dirname(file_path))
 
+    in_baseline_section = False
+    expect_baseline_detail_for = None
+
     in_pareto_section = False
-    next_line_is_baseline = False
-    next_line_is_ground_truth = False  # NEW: Flag for parsing ground truth
 
-    for line in lines:
-        line_strip = line.strip()
+    for i, raw in enumerate(lines):
+        line = raw.strip()
 
-        # MODIFIED: Logic to detect and parse ground truth data
-        if 'Ground Truth (from Test Log)' in line_strip:
-            next_line_is_ground_truth = True
+        # Detect sections
+        if line.startswith('--- Baseline Performance'):
+            in_baseline_section = True
+            expect_baseline_detail_for = None
             continue
-        
-        if next_line_is_ground_truth:
-            cost_match = re.search(r"Cost:\s*\$([\d,]+\.\d+)", line_strip)
-            wait_match = re.search(r"Wait:\s*([\d\.]+)h", line_strip)
-            if cost_match:
-                data['ground_truth']['cost'] = float(cost_match.group(1).replace(',', ''))
-            if wait_match:
-                data['ground_truth']['wait'] = float(wait_match.group(1))
-            next_line_is_ground_truth = False
-            continue
+        if line.startswith('--- Optimization Results') or line.startswith('--- Pareto Front Solutions'):
+            in_baseline_section = False
+            expect_baseline_detail_for = None
 
-        if 'Simulated Baseline (Original Policy)' in line_strip:
-            next_line_is_baseline = True
-            continue
+        # Parse dynamic baselines
+        if in_baseline_section:
+            m = re.match(r'^Simulated Baseline \(([^)]+)\):', line)
+            if m:
+                expect_baseline_detail_for = m.group(1)
+                # The next non-empty line should contain the details with '->'
+                continue
 
-        if next_line_is_baseline:
-            cost_match = re.search(r"Cost:\s*\$([\d,]+\.\d+)", line_strip)
-            wait_match = re.search(r"Wait:\s*([\d\.]+)h", line_strip)
-            if cost_match:
-                data['baseline']['cost'] = float(cost_match.group(1).replace(',', ''))
-            if wait_match:
-                data['baseline']['wait'] = float(wait_match.group(1))
-            next_line_is_baseline = False
-            continue
+            if expect_baseline_detail_for:
+                # Try to parse details line
+                # Example: "-> Cost: $85,549.21136128, Time: 14.41656583h, Wait: 0.66065359h, ..."
+                cost_match = re.search(r"Cost:\s*\$([\d,]*\d(?:\.\d+)?)", line)
+                wait_match = re.search(r"Wait:\s*([\d\.]+)h", line)
+                if cost_match and wait_match:
+                    cost_val = float(cost_match.group(1).replace(',', ''))
+                    wait_val = float(wait_match.group(1))
+                    data['baselines'][expect_baseline_detail_for] = {'cost': cost_val, 'wait': wait_val}
+                    expect_baseline_detail_for = None
+                # keep scanning until we find the details or a new header/section
+                continue
 
         # This regex is specific to your optimizer's output format for the pareto front
-        if re.match(r"Sol\s*\|\s*Cost\s*\|", line_strip):
+        if re.match(r"Sol\s*\|\s*Cost\s*\|", line):
             in_pareto_section = True
             continue
 
         if in_pareto_section:
-            if re.match(r"^-+\|-+", line_strip):
+            if re.match(r"^-+\|-+", line):
                 continue
-            if '---' in line_strip or not line_strip:
+            if '---' in line or not line:
                 in_pareto_section = False
                 continue
-            
+
             # Extracts the numbers from the cost and wait columns
-            parts = [p.strip() for p in line_strip.split('|')]
+            parts = [p.strip() for p in line.split('|')]
             if len(parts) >= 3 and parts[1] and parts[2]:
                 try:
                     cost = float(parts[1])
-                    # Wait time is in hours, which is what we need
                     wait = float(parts[2])
                     data['pareto_front'].append((cost, wait))
                 except (ValueError, IndexError):
-                    # Ignore lines that can't be parsed
                     pass
     
     return data
@@ -152,7 +153,7 @@ def calculate_delta_spread(front_approx, front_ref):
     
     yn_extreme = np.array([yn[0], yn[-1]])
     pref_extreme = np.array([pref_sorted[0], pref_sorted[-1]])
-
+    
     d_first = np.linalg.norm(yn_extreme[0] - pref_extreme[0])
     d_last = np.linalg.norm(yn_extreme[1] - pref_extreme[1])
     
@@ -187,6 +188,8 @@ def find_most_balanced_solution(points_np):
     distances = np.linalg.norm(norm_points, axis=1)
     
     best_index = np.argmin(distances)
+
+    print(f"best solution: {points_np[best_index]}")
     
     return points_np[best_index]
 
@@ -194,10 +197,13 @@ def find_most_balanced_solution(points_np):
 # --- Main Evaluation Logic ---
 # =============================================================================
 def main():
+    import seaborn as sns
+    sns.set_style("whitegrid")
+    sns.set_context("talk")
     print("--- Starting Evaluation of Optimization Runs ---")
     
     # --- Part 1: Data Aggregation and Preparation ---
-    DATASET = 'LoanApp'
+    DATASET = 'ConsultaDataMining'
 
     search_dir = f'optimization_runs/{DATASET}'
     
@@ -206,6 +212,7 @@ def main():
         if 'run_summary.txt' in filenames:
             file_path = os.path.join(dirpath, 'run_summary.txt')
             parsed_data = parse_run_summary(file_path)
+            print(f"Parsed data: {parsed_data}")
             if parsed_data['pareto_front']:
                 all_run_data.append(parsed_data)
 
@@ -221,33 +228,27 @@ def main():
     print(f"Total unique solutions found across all runs: {len(unique_solutions)}")
 
     # --- Part 2: High-Level Improvement Analysis ---
-    # MODIFIED: Expanded table to show improvement vs. both baselines
+    # Now prints improvements vs. each dynamic baseline present in the summary files.
     print("\n--- High-Level Improvement Analysis (Mean of Front vs. Baselines) ---\n")
-    print(f"{'Variant':<20} | {'Mean Cost Impr. (Sim)':<25} | {'Mean Wait Impr. (Sim)':<25} | {'Mean Cost Impr. (GT)':<25} | {'Mean Wait Impr. (GT)':<25}")
-    print("-" * 135)
     for data in all_run_data:
         front_np = np.array(data['pareto_front'])
         mean_cost, mean_wait = front_np.mean(axis=0)
-        
-        # Improvement vs. Simulated Baseline
-        cost_improv_sim = (data['baseline']['cost'] - mean_cost) / data['baseline']['cost'] * 100 if data.get('baseline', {}).get('cost') else 0
-        wait_improv_sim = (data['baseline']['wait'] - mean_wait) / data['baseline']['wait'] * 100 if data.get('baseline', {}).get('wait') else 0
-
-        # NEW: Improvement vs. Ground Truth Baseline
-        cost_improv_gt = (data['ground_truth']['cost'] - mean_cost) / data['ground_truth']['cost'] * 100 if data.get('ground_truth', {}).get('cost') else 0
-        wait_improv_gt = (data['ground_truth']['wait'] - mean_wait) / data['ground_truth']['wait'] * 100 if data.get('ground_truth', {}).get('wait') else 0
-        
-        print(f"{data['variant_name']:<20} | {f'{cost_improv_sim:.2f}%':<25} | {f'{wait_improv_sim:.2f}%':<25} | {f'{cost_improv_gt:.2f}%':<25} | {f'{wait_improv_gt:.2f}%':<25}")
-
+        print(f"Variant: {data['variant_name']}")
+        if not data['baselines']:
+            print("  (No baselines found)")
+        else:
+            for bname, bvals in data['baselines'].items():
+                cost_improv = (bvals['cost'] - mean_cost) / bvals['cost'] * 100 if bvals.get('cost') else 0.0
+                wait_improv = (bvals['wait'] - mean_wait) / bvals['wait'] * 100 if bvals.get('wait') else 0.0
+                print(f"  - Baseline '{bname}': Mean Cost Impr: {cost_improv:.2f}% | Mean Wait Impr: {wait_improv:.2f}%")
+        print("")
 
     # --- Part 3: Rigorous Front-Quality Analysis ---
-    print("\n\n--- Detailed Front Quality Analysis (vs. Reference Front) ---")
-
+    print("\n--- Detailed Front Quality Analysis (vs. Reference Front) ---")
     pref = get_pareto_front(unique_solutions)
     print(f"Constructed a Reference Pareto Front with {len(pref)} solutions.")
     if pref.size == 0:
         print("Reference front is empty. Cannot perform quality analysis.")
-        # Continue to balanced analysis even if reference front is empty
     else:
         max_cost = max(p[0] for p in unique_solutions) * 1.01
         max_wait = max(p[1] for p in unique_solutions) * 1.01
@@ -255,27 +256,57 @@ def main():
         print(f"Using reference point for Hyperarea: Cost={ref_point[0]:.2f}, Wait={ref_point[1]:.2f}")
 
         # --- Plotting ---
-        plt.figure(figsize=(12, 8))
+        plt.figure(figsize=(18, 10))
         colors = ['#ff7f0e', '#1f77b4', '#d62728', '#2ca02c'] 
         markers = ['s', 'o', '^', 'D']
         
         for i, data in enumerate(all_run_data):
+            variant_name = data['variant_name']
+            if variant_name == 'Random Scramble':
+                variant_name = 'Random'
+            elif variant_name == 'Mixed Strategy':
+                variant_name = 'Hybrid'
             front_np = np.array(data['pareto_front'])
             plt.scatter(front_np[:, 0], front_np[:, 1], 
-                        c=colors[i], marker=markers[i], s=50, 
-                        label=f"{data['variant_name']} ({len(front_np)} sols)")
+                        c=colors[i % len(colors)], marker=markers[i % len(markers)], s=250, 
+                        label=f"{variant_name}")
 
-        plt.scatter(pref[:, 0], pref[:, 1], c='black', marker='x', s=100, alpha=0.7,
-                    label=f'Reference Front (PRef) ({len(pref)} sols)', zorder=10)
-        plt.scatter(ref_point[0], ref_point[1], c='purple', marker='X', s=100,
-                    label='Hyperarea Reference Point', zorder=10, alpha=0.8)
+        # also add five baseline solutions to the plot
+        baseline_colors = ['#ff7f0e', '#1f77b4', '#d62728', '#2ca02c', '#9467bd']
+        baselines = {}
+        for data in all_run_data:
+            for bname, bvals in data['baselines'].items():
+                if bname == 'Cost':
+                    bname = 'LC'
+                if bname not in baselines:
+                    baselines[bname] = {'cost': 0, 'wait': 0}
+                baselines[bname]['cost'] += bvals['cost']
+                baselines[bname]['wait'] += bvals['wait']
+        for bname, bvals in baselines.items():
+            baselines[bname]['cost'] /= len(all_run_data)
+            baselines[bname]['wait'] /= len(all_run_data)
+        for bname, bvals in baselines.items():
+            plt.scatter(bvals['cost'], bvals['wait'], c=baseline_colors[list(baselines.keys()).index(bname)], marker='X', s=250, alpha=1.0,
+                        label=f'{bname}')
 
-        plt.title(f'Comparison of Pareto Fronts from Different Mutation Strategies [{DATASET}]')
-        plt.xlabel('Total Cost ($)')
-        plt.ylabel('Average Wait Time (hours)')
+        plt.scatter(pref[:, 0], pref[:, 1], c='black', marker='x', s=250, alpha=0.7,
+                    label=f'Front', zorder=10)
+        # plt.scatter(ref_point[0], ref_point[1], c='purple', marker='X', s=150,
+        #             label='Hyperarea RP', zorder=10, alpha=0.8)
+
+        # plt.title(f'Comparison of Pareto Fronts from Different Mutation Strategies [{DATASET}]')
+        plt.xlabel('Total Cost ($)', fontsize=35)
+        plt.ylabel('Average Wait Time (hours)', fontsize=35)
+        plt.xticks(fontsize=30)
+        plt.yticks(fontsize=30)
         plt.grid(True, linestyle='--', alpha=0.6)
-        plt.legend()
-        plot_path = f'pareto_front_comparison.png'
+        plt.legend(fontsize=30, ncol=2)
+        # plt.tight_layout()
+        # log scale on x-axis
+        # plt.xscale('log')
+        # log scale on y-axis
+        plt.yscale('log')
+        plot_path = f'results/pareto_front_comparison_{DATASET}.pdf'
         plt.savefig(plot_path)
         print(f"\nSaved comparison plot to '{plot_path}'")
 
@@ -298,32 +329,55 @@ def main():
             print(f"{data['variant_name']:<20} | {hv_ratio:<18.3f} | {purity:<10.3f} | {hausdorff:<18.2f} | {delta:<15.3f}")
 
     # =========================================================================
-    # --- MODIFIED: Analysis of the Most Balanced Solution's Improvement ---
+    # --- Analysis of the Most Balanced Solution's Improvement ---
     # =========================================================================
     print("\n\n--- Most Balanced Solution Improvement Analysis (vs Baselines) ---")
     print("Identifies the solution closest to the 'ideal' point (0,0) in normalized space for each front.\n")
-    print(f"{'Variant':<20} | {'Cost Impr. (Sim)':<20} | {'Wait Impr. (Sim)':<20} | {'Cost Impr. (GT)':<20} | {'Wait Impr. (GT)':<20}")
-    print("-" * 115)
+
+    # First, identify the most balanced solution among all variants
+    pareto_fronts = []
+    for data in all_run_data:
+        pareto_fronts.extend(data['pareto_front'])
+    front_np = np.array(pareto_fronts)
+    balanced_solution = find_most_balanced_solution(front_np)
+    print(f"Balanced solution:")
+    print(f"  - Cost: {round(balanced_solution[0]/1000, 0)}")
+    print(f"  - Wait: {balanced_solution[1]:.2f}")
+    print("")
+
+    # Then, compute the average baseline performance
+    baselines = {}
+    for data in all_run_data:
+        for bname, bvals in data['baselines'].items():
+            if bname not in baselines:
+                baselines[bname] = {'cost': 0, 'wait': 0}
+            baselines[bname]['cost'] += bvals['cost']
+            baselines[bname]['wait'] += bvals['wait']
+    for bname, bvals in baselines.items():
+        baselines[bname]['cost'] /= len(all_run_data)
+        baselines[bname]['wait'] /= len(all_run_data)
+    print(f"Average baseline performance:")
+    for bname, bvals in baselines.items():
+        print(f"  - Baseline '{bname}': Cost: {round(bvals['cost']/1000, 0)}, Wait: {bvals['wait']:.2f}")
+    print("")
 
     for data in all_run_data:
         front_np = np.array(data['pareto_front'])
         balanced_solution = find_most_balanced_solution(front_np)
+        print(f"Variant: {data['variant_name']}")
         
         if balanced_solution is not None:
             cost, wait = balanced_solution
-
-            # NEW: Calculate improvements vs. Simulated Baseline
-            cost_improv_sim_bal = (data['baseline']['cost'] - cost) / data['baseline']['cost'] * 100 if data.get('baseline', {}).get('cost') else 0
-            wait_improv_sim_bal = (data['baseline']['wait'] - wait) / data['baseline']['wait'] * 100 if data.get('baseline', {}).get('wait') else 0
-            
-            # NEW: Calculate improvements vs. Ground Truth Baseline
-            cost_improv_gt_bal = (data['ground_truth']['cost'] - cost) / data['ground_truth']['cost'] * 100 if data.get('ground_truth', {}).get('cost') else 0
-            wait_improv_gt_bal = (data['ground_truth']['wait'] - wait) / data['ground_truth']['wait'] * 100 if data.get('ground_truth', {}).get('wait') else 0
-
-            print(f"{data['variant_name']:<20} | {f'{cost_improv_sim_bal:.2f}%':<20} | {f'{wait_improv_sim_bal:.2f}%':<20} | {f'{cost_improv_gt_bal:.2f}%':<20} | {f'{wait_improv_gt_bal:.2f}%':<20}")
+            if not baselines:
+                print("  (No baselines found)")
+            else:
+                for bname, bvals in baselines.items():
+                    cost_improv = (bvals['cost'] - cost) / bvals['cost'] * 100 if bvals.get('cost') else 0.0
+                    wait_improv = (bvals['wait'] - wait) / bvals['wait'] * 100 if bvals.get('wait') else 0.0
+                    print(f"  - Baseline '{bname}': Cost Impr: {cost_improv:.2f}% | Wait Impr: {wait_improv:.2f}%")
         else:
-            print(f"{data['variant_name']:<20} | {'N/A':<20} | {'N/A':<20} | {'N/A':<20} | {'N/A':<20}")
-
+            print("  (No balanced solution found)")
+        print("")
 
 if __name__ == "__main__":
     main()

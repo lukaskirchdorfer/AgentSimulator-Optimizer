@@ -1,0 +1,51 @@
+Run Summary for: pop100_gen100_runs3_config_0.7_20251011-213511
+========================================
+
+--- Run Parameters ---
+Log Path: raw_data/Confidential_1000.csv
+Objectives: cost,wait
+Population Size: 100
+Generations: 100
+Runs per Fitness Eval: 3
+Crossover Probability: 0.7
+Mutation Probability: 0.3
+Cores Used: 20
+
+--- Baseline Performance ---
+
+Simulated Baseline (As-is):
+  -> Cost: $160,764.19136513, Time: 76.19045188h, Wait: 1.61910235h, Agents/Case: 17.77500000, Total Agents: 26
+
+Simulated Baseline (Availability):
+  -> Cost: $142,886.02936326, Time: 81.33469148h, Wait: 1.71444523h, Agents/Case: 14.99000000, Total Agents: 26
+
+Simulated Baseline (Cost):
+  -> Cost: $112,415.24356555, Time: 58.54614683h, Wait: 1.28469035h, Agents/Case: 14.35166667, Total Agents: 19
+
+Simulated Baseline (Random):
+  -> Cost: $184,647.20651925, Time: 88.32080203h, Wait: 1.85268147h, Agents/Case: 17.06166667, Total Agents: 26
+
+Simulated Baseline (SPT):
+  -> Cost: $122,281.33558293, Time: 64.38305629h, Wait: 1.38576211h, Agents/Case: 15.70333333, Total Agents: 20
+
+--- Optimization Results ---
+Found 2 non-dominated solutions (the Pareto Front).
+
+--- Pareto Front Solutions ---
+Sol | Cost            | Wait           
+----|------------------------------------
+1   | 97970.5         | 0.750938       
+2   | 101047          | 0.671157       
+
+--- Most Balanced Solution (based on optimized metrics) ---
+Cost: $124,188.29794245, Time: 66.71703112h, Wait: 1.39646366h, Agents/Case: 17.05500000, Total Agents: 26
+
+Compared to Simulated Baseline:
+  -> Cost Reduction: -1.55948768%
+  -> Time Reduction: -3.62513830%
+  -> Wait Reduction: -0.77225028%
+  -> Agents/Case Reduction: -8.60751433%
+  -> Total Agents Reduction: -30.00000000%
+
+Best balanced policy saved to optimization_runs/Confidential_1000/pop100_gen100_runs3_config_0.7_20251011-213511/best_advanced_policy.json
+Log for the best balanced policy saved to: optimization_runs/Confidential_1000/pop100_gen100_runs3_config_0.7_20251011-213511/best_balanced_policy_log.csv

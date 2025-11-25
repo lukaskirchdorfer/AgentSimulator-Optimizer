@@ -1,0 +1,63 @@
+Run Summary for: pop100_gen100_runs3_config_mix_20251010-131844
+========================================
+
+--- Run Parameters ---
+Log Path: raw_data/P2P.csv
+Objectives: cost,wait
+Population Size: 100
+Generations: 100
+Runs per Fitness Eval: 3
+Crossover Probability: 0.7
+Mutation Probability: 0.3
+Cores Used: 20
+
+--- Baseline Performance ---
+
+Simulated Baseline (As-is):
+  -> Cost: $103,122.04952907, Time: 277.80686804h, Wait: 18.34721833h, Agents/Case: 8.46556474, Total Agents: 24
+
+Simulated Baseline (Availability):
+  -> Cost: $117,319.79773118, Time: 27.96651974h, Wait: 0.85981648h, Agents/Case: 7.38842975, Total Agents: 27
+
+Simulated Baseline (Cost):
+  -> Cost: $63,099.25109331, Time: 282.36452493h, Wait: 17.90414705h, Agents/Case: 4.33333333, Total Agents: 5
+
+Simulated Baseline (Random):
+  -> Cost: $142,588.69644961, Time: 52.41151921h, Wait: 2.36841877h, Agents/Case: 9.52341598, Total Agents: 27
+
+Simulated Baseline (SPT):
+  -> Cost: $110,822.02161270, Time: 59.67403673h, Wait: 2.83096573h, Agents/Case: 4.38292011, Total Agents: 10
+
+--- Optimization Results ---
+Found 14 non-dominated solutions (the Pareto Front).
+
+--- Pareto Front Solutions ---
+Sol | Cost            | Wait           
+----|------------------------------------
+1   | 49015.1         | 10.5537        
+2   | 53977.3         | 10.4237        
+3   | 54150.6         | 10.0713        
+4   | 54602.8         | 10.0185        
+5   | 57147.1         | 9.36736        
+6   | 57404.8         | 8.73294        
+7   | 58634           | 5.61654        
+8   | 62409.5         | 4.41062        
+9   | 66425.3         | 2.70043        
+10  | 69026.2         | 2.33887        
+11  | 72169.9         | 2.07499        
+12  | 92585.7         | 1.97259        
+13  | 93575.3         | 1.76667        
+14  | 94517.7         | 1.53457        
+
+--- Most Balanced Solution (based on optimized metrics) ---
+Cost: $78,045.79001217, Time: 79.63367607h, Wait: 4.49293631h, Agents/Case: 8.88705234, Total Agents: 26
+
+Compared to Simulated Baseline:
+  -> Cost Reduction: 29.57555829%
+  -> Time Reduction: -33.44777801%
+  -> Wait Reduction: -58.70684211%
+  -> Agents/Case Reduction: -102.76555625%
+  -> Total Agents Reduction: -165.51724138%
+
+Best balanced policy saved to optimization_runs/P2P/pop100_gen100_runs3_config_mix_20251010-131844/best_advanced_policy.json
+Log for the best balanced policy saved to: optimization_runs/P2P/pop100_gen100_runs3_config_mix_20251010-131844/best_balanced_policy_log.csv

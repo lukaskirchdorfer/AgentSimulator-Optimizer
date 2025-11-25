@@ -1,0 +1,2934 @@
+{
+    "0": {
+        "Amend Purchase Requisition": {
+            "16": {
+                "Analyze Purchase Requisition": 1.0
+            }
+        },
+        "Create Purchase Requisition": {
+            "0": {
+                "Create Request for Quotation": 0.047619047619047616
+            },
+            "16": {
+                "Analyze Purchase Requisition": 0.14285714285714285
+            },
+            "20": {
+                "Analyze Purchase Requisition": 0.2857142857142857
+            },
+            "17": {
+                "Analyze Purchase Requisition": 0.21428571428571427
+            },
+            "11": {
+                "Create Request for Quotation": 0.07142857142857142
+            },
+            "14": {
+                "Create Request for Quotation": 0.047619047619047616
+            },
+            "26": {
+                "Create Request for Quotation": 0.023809523809523808
+            },
+            "3": {
+                "Create Request for Quotation": 0.023809523809523808
+            },
+            "7": {
+                "Create Request for Quotation": 0.023809523809523808
+            },
+            "13": {
+                "Create Request for Quotation": 0.023809523809523808
+            },
+            "12": {
+                "Create Request for Quotation": 0.023809523809523808
+            },
+            "18": {
+                "Create Request for Quotation": 0.023809523809523808
+            },
+            "4": {
+                "Create Request for Quotation": 0.047619047619047616
+            }
+        },
+        "Create Request for Quotation": {
+            "1": {
+                "Analyze Request for Quotation": 0.35855001852433127
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.4378711864823296
+            },
+            "5": {
+                "Analyze Request for Quotation": 0.20357879499333909
+            }
+        },
+        "Choose best option": {
+            "2": {
+                "Settle Conditions With Supplier": 0.07165984281963847
+            },
+            "5": {
+                "Settle Conditions With Supplier": 0.8187897522042307
+            },
+            "1": {
+                "Settle Conditions With Supplier": 0.109550404976131
+            }
+        },
+        "Amend Request for Quotation": {
+            "5": {
+                "Analyze Request for Quotation": 0.15658270831933413
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.19022035166122364
+            },
+            "1": {
+                "Analyze Request for Quotation": 0.6531969400194423
+            }
+        },
+        "Analyze Quotation Comparison Map": {
+            "13": {
+                "Choose best option": 0.026801800586692622
+            },
+            "3": {
+                "Choose best option": 0.012513549693149672
+            },
+            "0": {
+                "Choose best option": 0.037870031965416724
+            },
+            "18": {
+                "Choose best option": 0.020733168165536813
+            },
+            "21": {
+                "Choose best option": 0.013195425824457287
+            },
+            "4": {
+                "Choose best option": 0.0805387980624298
+            },
+            "14": {
+                "Choose best option": 0.1298643315508117
+            },
+            "24": {
+                "Choose best option": 0.09355872122941791
+            },
+            "26": {
+                "Choose best option": 0.13975293464610145
+            },
+            "25": {
+                "Choose best option": 0.10296426262540283
+            },
+            "23": {
+                "Choose best option": 0.13312850006337312
+            },
+            "7": {
+                "Choose best option": 0.12858184609282164
+            },
+            "12": {
+                "Choose best option": 0.0016189363317813548
+            },
+            "11": {
+                "Choose best option": 0.07887769316260701
+            }
+        },
+        "Release Purchase Order": {
+            "2": {
+                "Approve Purchase Order for payment": 0.5
+            },
+            "1": {
+                "Approve Purchase Order for payment": 0.23333333333333334
+            },
+            "5": {
+                "Approve Purchase Order for payment": 0.23333333333333334,
+                "Settle Dispute With Supplier": 0.03333333333333333
+            }
+        }
+    },
+    "1": {
+        "Analyze Request for Quotation": {
+            "1": {
+                "Send Request for Quotation to Supplier": 0.07157750176556872,
+                "zzz_end": 0.029272417935321416
+            },
+            "12": {
+                "Amend Request for Quotation": 0.0676599276784283
+            },
+            "5": {
+                "Send Request for Quotation to Supplier": 0.06289989993346756
+            },
+            "2": {
+                "Send Request for Quotation to Supplier": 0.08072722563262948
+            },
+            "24": {
+                "Amend Request for Quotation": 0.031317009907830186
+            },
+            "21": {
+                "Amend Request for Quotation": 0.07173480374523024
+            },
+            "16": {
+                "Amend Request for Quotation": 0.03381829409769433
+            },
+            "7": {
+                "Amend Request for Quotation": 0.04660425047536015
+            },
+            "26": {
+                "Amend Request for Quotation": 0.01812585315945529
+            },
+            "4": {
+                "Amend Request for Quotation": 0.07370851052223017
+            },
+            "0": {
+                "Amend Request for Quotation": 0.026415161062221287
+            },
+            "25": {
+                "Amend Request for Quotation": 0.0617191820633652
+            },
+            "13": {
+                "Amend Request for Quotation": 0.049520583292224744
+            },
+            "23": {
+                "Amend Request for Quotation": 0.009115185661748971
+            },
+            "3": {
+                "Amend Request for Quotation": 0.012108961485802547
+            },
+            "11": {
+                "Amend Request for Quotation": 0.025160592086904965
+            },
+            "14": {
+                "Amend Request for Quotation": 0.016995958187591986
+            },
+            "18": {
+                "Amend Request for Quotation": 0.07012289660629661
+            },
+            "20": {
+                "Amend Request for Quotation": 0.06322373663640078
+            },
+            "17": {
+                "Amend Request for Quotation": 0.07817204806422694
+            }
+        },
+        "Send Request for Quotation to Supplier": {
+            "2": {
+                "Create Quotation comparison Map": 0.19341897735661845
+            },
+            "1": {
+                "Create Quotation comparison Map": 0.45772115260353774
+            },
+            "5": {
+                "Create Quotation comparison Map": 0.34885987003984376
+            }
+        },
+        "Create Purchase Order": {
+            "6": {
+                "Confirm Purchase Order": 0.17391304347826086
+            },
+            "19": {
+                "Confirm Purchase Order": 0.2028985507246377
+            },
+            "22": {
+                "Confirm Purchase Order": 0.18115942028985507
+            },
+            "8": {
+                "Confirm Purchase Order": 0.2463768115942029
+            },
+            "15": {
+                "Confirm Purchase Order": 0.1956521739130435
+            }
+        },
+        "Approve Purchase Order for payment": {
+            "8": {
+                "Send Invoice": 0.33098591549295775
+            },
+            "15": {
+                "Send Invoice": 0.2112676056338028
+            },
+            "19": {
+                "Send Invoice": 0.16901408450704225
+            },
+            "22": {
+                "Send Invoice": 0.19014084507042253
+            },
+            "6": {
+                "Send Invoice": 0.09859154929577464
+            }
+        },
+        "Create Quotation comparison Map": {
+            "13": {
+                "Analyze Quotation Comparison Map": 0.10801800013700959
+            },
+            "7": {
+                "Analyze Quotation Comparison Map": 0.045201325466291846
+            },
+            "24": {
+                "Analyze Quotation Comparison Map": 0.04798007683631292
+            },
+            "25": {
+                "Analyze Quotation Comparison Map": 0.0808449487496577
+            },
+            "18": {
+                "Analyze Quotation Comparison Map": 0.10543316440732138
+            },
+            "26": {
+                "Analyze Quotation Comparison Map": 0.08445250151099158
+            },
+            "0": {
+                "Analyze Quotation Comparison Map": 0.09257441723693664
+            },
+            "23": {
+                "Analyze Quotation Comparison Map": 0.03975951859156738
+            },
+            "12": {
+                "Analyze Quotation Comparison Map": 0.10100943779906754
+            },
+            "4": {
+                "Analyze Quotation Comparison Map": 0.04007022575990155
+            },
+            "3": {
+                "Analyze Quotation Comparison Map": 0.09457512121832415
+            },
+            "21": {
+                "Analyze Quotation Comparison Map": 0.055132807536002255
+            },
+            "11": {
+                "Analyze Quotation Comparison Map": 0.013543396099312459
+            },
+            "14": {
+                "Analyze Quotation Comparison Map": 0.09140505865130291
+            }
+        },
+        "Settle Conditions With Supplier": {
+            "1": {
+                "Create Purchase Order": 0.424
+            },
+            "5": {
+                "Create Purchase Order": 0.264
+            },
+            "2": {
+                "Create Purchase Order": 0.312
+            }
+        },
+        "Settle Dispute With Supplier": {
+            "11": {
+                "Release Purchase Order": 0.24461612000553215
+            },
+            "4": {
+                "Release Purchase Order": 0.23184097727256817
+            },
+            "3": {
+                "Release Purchase Order": 0.0700702559791769
+            },
+            "0": {
+                "Release Purchase Order": 0.2527628950303983
+            },
+            "12": {
+                "Release Purchase Order": 0.20070975171232452
+            }
+        }
+    },
+    "2": {
+        "Create Quotation comparison Map": {
+            "3": {
+                "Analyze Quotation Comparison Map": 0.10357370593898642
+            },
+            "23": {
+                "Analyze Quotation Comparison Map": 0.08632745663641882
+            },
+            "13": {
+                "Analyze Quotation Comparison Map": 0.056526903683924004
+            },
+            "4": {
+                "Analyze Quotation Comparison Map": 0.04578202805980538
+            },
+            "0": {
+                "Analyze Quotation Comparison Map": 0.05566666769690826
+            },
+            "7": {
+                "Analyze Quotation Comparison Map": 0.0014687983028139721
+            },
+            "11": {
+                "Analyze Quotation Comparison Map": 0.10687558643302957
+            },
+            "12": {
+                "Analyze Quotation Comparison Map": 0.03286188014654187
+            },
+            "18": {
+                "Analyze Quotation Comparison Map": 0.09241519387956017
+            },
+            "21": {
+                "Analyze Quotation Comparison Map": 0.05733741102568358
+            },
+            "14": {
+                "Analyze Quotation Comparison Map": 0.1049053667538284
+            },
+            "26": {
+                "Analyze Quotation Comparison Map": 0.09379699376363873
+            },
+            "25": {
+                "Analyze Quotation Comparison Map": 0.05519592826501897
+            },
+            "24": {
+                "Analyze Quotation Comparison Map": 0.10726607941384188
+            }
+        },
+        "Analyze Request for Quotation": {
+            "13": {
+                "Amend Request for Quotation": 0.023758533150104247
+            },
+            "26": {
+                "Amend Request for Quotation": 0.09634043431725306
+            },
+            "5": {
+                "Send Request for Quotation to Supplier": 0.07862159169298033
+            },
+            "14": {
+                "Amend Request for Quotation": 0.08045326823792678
+            },
+            "16": {
+                "Amend Request for Quotation": 0.0004371631600518146
+            },
+            "12": {
+                "Amend Request for Quotation": 0.02489396094346648
+            },
+            "18": {
+                "Amend Request for Quotation": 0.09356468370745052
+            },
+            "7": {
+                "Amend Request for Quotation": 0.07998774135947485
+            },
+            "23": {
+                "Amend Request for Quotation": 0.04433839449002938
+            },
+            "1": {
+                "Send Request for Quotation to Supplier": 0.01223219961602292
+            },
+            "2": {
+                "Send Request for Quotation to Supplier": 0.04271944679477637,
+                "zzz_end": 0.05587721778266681
+            },
+            "11": {
+                "Amend Request for Quotation": 0.06312553959627314
+            },
+            "3": {
+                "Amend Request for Quotation": 0.042732169903629144
+            },
+            "4": {
+                "Amend Request for Quotation": 0.053701879883425264
+            },
+            "0": {
+                "Amend Request for Quotation": 0.06759680531800819
+            },
+            "24": {
+                "Amend Request for Quotation": 0.048126023336544026
+            },
+            "21": {
+                "Amend Request for Quotation": 0.01579922300368916
+            },
+            "25": {
+                "Amend Request for Quotation": 0.06784258783265774
+            },
+            "20": {
+                "Amend Request for Quotation": 0.007851135873569769
+            }
+        },
+        "Settle Conditions With Supplier": {
+            "2": {
+                "Create Purchase Order": 0.47706193141689607
+            },
+            "1": {
+                "Create Purchase Order": 0.2773450441781981
+            },
+            "5": {
+                "Create Purchase Order": 0.24559302440490582
+            }
+        },
+        "Create Purchase Order": {
+            "15": {
+                "Confirm Purchase Order": 0.002347742495180952
+            },
+            "22": {
+                "Confirm Purchase Order": 0.36815177965628837
+            },
+            "6": {
+                "Confirm Purchase Order": 0.20961184652858342
+            },
+            "8": {
+                "Confirm Purchase Order": 0.34376351083771317
+            },
+            "19": {
+                "Confirm Purchase Order": 0.07612512048223413
+            }
+        },
+        "Send Request for Quotation to Supplier": {
+            "5": {
+                "Create Quotation comparison Map": 0.21705426356589147
+            },
+            "2": {
+                "Create Quotation comparison Map": 0.49612403100775193
+            },
+            "1": {
+                "Create Quotation comparison Map": 0.2868217054263566
+            }
+        },
+        "Approve Purchase Order for payment": {
+            "15": {
+                "Send Invoice": 0.23646935863925225
+            },
+            "19": {
+                "Send Invoice": 0.23324766757494383
+            },
+            "6": {
+                "Send Invoice": 0.15672801959477872
+            },
+            "22": {
+                "Send Invoice": 0.18356884273291843
+            },
+            "8": {
+                "Send Invoice": 0.18998611145810693
+            }
+        },
+        "Settle Dispute With Supplier": {
+            "11": {
+                "Release Purchase Order": 0.3462590836921186
+            },
+            "7": {
+                "Release Purchase Order": 0.181178017258471
+            },
+            "4": {
+                "Release Purchase Order": 0.319475001476074
+            },
+            "23": {
+                "Release Purchase Order": 0.15308789757333635
+            }
+        }
+    },
+    "3": {
+        "Analyze Quotation Comparison Map": {
+            "4": {
+                "Choose best option": 0.0976763070876552
+            },
+            "3": {
+                "Choose best option": 0.08259013734079554
+            },
+            "21": {
+                "Choose best option": 0.1381137086408935
+            },
+            "14": {
+                "Choose best option": 0.13529927171792824
+            },
+            "26": {
+                "Choose best option": 0.1381977087693197
+            },
+            "12": {
+                "Choose best option": 0.07563202831311394
+            },
+            "18": {
+                "Choose best option": 0.005383681626233149
+            },
+            "23": {
+                "Choose best option": 0.0573226653651038
+            },
+            "11": {
+                "Choose best option": 0.11556023900834055
+            },
+            "0": {
+                "Choose best option": 0.0856490800567725
+            },
+            "25": {
+                "Choose best option": 0.0012048268492750609
+            },
+            "24": {
+                "Choose best option": 0.06737034522456865
+            }
+        },
+        "Create Purchase Requisition": {
+            "11": {
+                "Create Request for Quotation": 0.0625
+            },
+            "20": {
+                "Analyze Purchase Requisition": 0.25
+            },
+            "17": {
+                "Analyze Purchase Requisition": 0.1875
+            },
+            "13": {
+                "Create Request for Quotation": 0.15625
+            },
+            "21": {
+                "Create Request for Quotation": 0.0625
+            },
+            "16": {
+                "Analyze Purchase Requisition": 0.125
+            },
+            "23": {
+                "Create Request for Quotation": 0.0625
+            },
+            "4": {
+                "Create Request for Quotation": 0.03125
+            },
+            "24": {
+                "Create Request for Quotation": 0.0625
+            }
+        },
+        "Choose best option": {
+            "2": {
+                "Settle Conditions With Supplier": 0.43444731834714656
+            },
+            "1": {
+                "Settle Conditions With Supplier": 0.34764765729876684
+            },
+            "5": {
+                "Settle Conditions With Supplier": 0.21790502435408665
+            }
+        },
+        "Create Request for Quotation": {
+            "5": {
+                "Analyze Request for Quotation": 0.708817363100405
+            },
+            "1": {
+                "Analyze Request for Quotation": 0.25772352011811794
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.033459116781477165
+            }
+        },
+        "Release Purchase Order": {
+            "5": {
+                "Approve Purchase Order for payment": 0.33830877112378266
+            },
+            "2": {
+                "Approve Purchase Order for payment": 0.1320643456100893
+            },
+            "1": {
+                "Approve Purchase Order for payment": 0.24909016371301218,
+                "Settle Dispute With Supplier": 0.28053671955311577
+            }
+        },
+        "Amend Request for Quotation": {
+            "1": {
+                "Analyze Request for Quotation": 0.5813953488372093
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.4186046511627907
+            },
+            "5": {
+                "Analyze Request for Quotation": 0.0
+            }
+        },
+        "Amend Purchase Requisition": {
+            "17": {
+                "Analyze Purchase Requisition": 0.36793595161542547
+            },
+            "20": {
+                "Analyze Purchase Requisition": 0.6320640483845744
+            }
+        }
+    },
+    "4": {
+        "Choose best option": {
+            "5": {
+                "Settle Conditions With Supplier": 0.1400007100042586
+            },
+            "1": {
+                "Settle Conditions With Supplier": 0.4610644083371434
+            },
+            "2": {
+                "Settle Conditions With Supplier": 0.3989348816585979
+            }
+        },
+        "Create Request for Quotation": {
+            "5": {
+                "Analyze Request for Quotation": 0.06697466660955478
+            },
+            "1": {
+                "Analyze Request for Quotation": 0.6790128531356359
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.2540124802548093
+            }
+        },
+        "Amend Request for Quotation": {
+            "2": {
+                "Analyze Request for Quotation": 0.2727272727272727
+            },
+            "5": {
+                "Analyze Request for Quotation": 0.45454545454545453
+            },
+            "1": {
+                "Analyze Request for Quotation": 0.2727272727272727
+            }
+        },
+        "Create Purchase Requisition": {
+            "26": {
+                "Create Request for Quotation": 0.06792599947584596
+            },
+            "16": {
+                "Analyze Purchase Requisition": 0.10642824916311114
+            },
+            "20": {
+                "Analyze Purchase Requisition": 0.12357055546752545
+            },
+            "7": {
+                "Create Request for Quotation": 0.10516614786178899
+            },
+            "17": {
+                "Analyze Purchase Requisition": 0.04174004432034424
+            },
+            "21": {
+                "Create Request for Quotation": 0.016244944125221074
+            },
+            "14": {
+                "Create Request for Quotation": 0.020976354339223614
+            },
+            "24": {
+                "Create Request for Quotation": 0.07266898892910309
+            },
+            "0": {
+                "Create Request for Quotation": 0.02846066378572409
+            },
+            "25": {
+                "Create Request for Quotation": 0.12899746735119993
+            },
+            "3": {
+                "Create Request for Quotation": 0.05707154162380401
+            },
+            "4": {
+                "Create Request for Quotation": 0.10019439961462633
+            },
+            "13": {
+                "Create Request for Quotation": 0.13055464394248212
+            }
+        },
+        "Release Purchase Order": {
+            "1": {
+                "Approve Purchase Order for payment": 0.4166666666666667
+            },
+            "5": {
+                "Approve Purchase Order for payment": 0.2222222222222222,
+                "Settle Dispute With Supplier": 0.027777777777777776
+            },
+            "2": {
+                "Approve Purchase Order for payment": 0.3055555555555556,
+                "Settle Dispute With Supplier": 0.027777777777777776
+            }
+        },
+        "Analyze Quotation Comparison Map": {
+            "7": {
+                "Choose best option": 0.13513513513513514
+            },
+            "25": {
+                "Choose best option": 0.10810810810810811
+            },
+            "3": {
+                "Choose best option": 0.08108108108108109
+            },
+            "23": {
+                "Choose best option": 0.08108108108108109
+            },
+            "21": {
+                "Choose best option": 0.05405405405405406
+            },
+            "11": {
+                "Choose best option": 0.05405405405405406
+            },
+            "18": {
+                "Choose best option": 0.05405405405405406
+            },
+            "0": {
+                "Choose best option": 0.05405405405405406
+            },
+            "4": {
+                "Choose best option": 0.05405405405405406
+            },
+            "12": {
+                "Choose best option": 0.08108108108108109
+            },
+            "13": {
+                "Choose best option": 0.05405405405405406
+            },
+            "14": {
+                "Choose best option": 0.08108108108108109
+            },
+            "26": {
+                "Choose best option": 0.08108108108108109
+            },
+            "24": {
+                "Choose best option": 0.02702702702702703
+            }
+        }
+    },
+    "5": {
+        "Settle Conditions With Supplier": {
+            "1": {
+                "Create Purchase Order": 0.943699061047047
+            },
+            "5": {
+                "Create Purchase Order": 0.0
+            },
+            "2": {
+                "Create Purchase Order": 0.05630093895295284
+            }
+        },
+        "Send Request for Quotation to Supplier": {
+            "1": {
+                "Create Quotation comparison Map": 0.3359375
+            },
+            "5": {
+                "Create Quotation comparison Map": 0.421875
+            },
+            "2": {
+                "Create Quotation comparison Map": 0.2421875
+            }
+        },
+        "Create Quotation comparison Map": {
+            "18": {
+                "Analyze Quotation Comparison Map": 0.07592474048057009
+            },
+            "26": {
+                "Analyze Quotation Comparison Map": 0.09217461424031087
+            },
+            "4": {
+                "Analyze Quotation Comparison Map": 0.03667585253232539
+            },
+            "24": {
+                "Analyze Quotation Comparison Map": 0.07722341193300367
+            },
+            "12": {
+                "Analyze Quotation Comparison Map": 0.09454858279533153
+            },
+            "23": {
+                "Analyze Quotation Comparison Map": 0.09626685934993366
+            },
+            "7": {
+                "Analyze Quotation Comparison Map": 0.0697967157608452
+            },
+            "3": {
+                "Analyze Quotation Comparison Map": 0.06539995014778538
+            },
+            "13": {
+                "Analyze Quotation Comparison Map": 0.026693070505359275
+            },
+            "11": {
+                "Analyze Quotation Comparison Map": 0.08672065314221257
+            },
+            "25": {
+                "Analyze Quotation Comparison Map": 0.08957629073660778
+            },
+            "14": {
+                "Analyze Quotation Comparison Map": 0.03575065034491025
+            },
+            "21": {
+                "Analyze Quotation Comparison Map": 0.09558135556087458
+            },
+            "0": {
+                "Analyze Quotation Comparison Map": 0.057667252469929896
+            }
+        },
+        "Create Purchase Order": {
+            "19": {
+                "Confirm Purchase Order": 0.3250617959077244
+            },
+            "8": {
+                "Confirm Purchase Order": 0.1378116603849477
+            },
+            "15": {
+                "Confirm Purchase Order": 0.30857426750723216
+            },
+            "6": {
+                "Confirm Purchase Order": 0.020853307858724246
+            },
+            "22": {
+                "Confirm Purchase Order": 0.20769896834137144
+            }
+        },
+        "Approve Purchase Order for payment": {
+            "8": {
+                "Send Invoice": 0.24060150375939848
+            },
+            "15": {
+                "Send Invoice": 0.17293233082706766
+            },
+            "6": {
+                "Send Invoice": 0.19548872180451127
+            },
+            "19": {
+                "Send Invoice": 0.18796992481203006
+            },
+            "22": {
+                "Send Invoice": 0.20300751879699247
+            }
+        },
+        "Analyze Request for Quotation": {
+            "21": {
+                "Amend Request for Quotation": 0.03814713896457766
+            },
+            "1": {
+                "Send Request for Quotation to Supplier": 0.14168937329700274
+            },
+            "24": {
+                "Amend Request for Quotation": 0.05994550408719346
+            },
+            "4": {
+                "Amend Request for Quotation": 0.013623978201634877
+            },
+            "13": {
+                "Amend Request for Quotation": 0.043596730245231606
+            },
+            "25": {
+                "Amend Request for Quotation": 0.01634877384196185
+            },
+            "2": {
+                "Send Request for Quotation to Supplier": 0.09809264305177112
+            },
+            "16": {
+                "Amend Request for Quotation": 0.021798365122615803
+            },
+            "26": {
+                "Amend Request for Quotation": 0.02997275204359673
+            },
+            "5": {
+                "zzz_end": 0.12534059945504086,
+                "Send Request for Quotation to Supplier": 0.11716621253405994
+            },
+            "20": {
+                "Amend Request for Quotation": 0.021798365122615803
+            },
+            "14": {
+                "Amend Request for Quotation": 0.02997275204359673
+            },
+            "12": {
+                "Amend Request for Quotation": 0.027247956403269755
+            },
+            "0": {
+                "Amend Request for Quotation": 0.04087193460490463
+            },
+            "11": {
+                "Amend Request for Quotation": 0.03814713896457766
+            },
+            "23": {
+                "Amend Request for Quotation": 0.02997275204359673
+            },
+            "7": {
+                "Amend Request for Quotation": 0.01634877384196185
+            },
+            "3": {
+                "Amend Request for Quotation": 0.04904632152588556
+            },
+            "18": {
+                "Amend Request for Quotation": 0.01907356948228883
+            },
+            "17": {
+                "Amend Request for Quotation": 0.021798365122615803
+            }
+        },
+        "Settle Dispute With Supplier": {
+            "3": {
+                "Release Purchase Order": 0.07142857142857142
+            },
+            "4": {
+                "Release Purchase Order": 0.14285714285714285
+            },
+            "14": {
+                "Release Purchase Order": 0.2857142857142857
+            },
+            "7": {
+                "Release Purchase Order": 0.07142857142857142
+            },
+            "26": {
+                "Release Purchase Order": 0.07142857142857142
+            },
+            "23": {
+                "Release Purchase Order": 0.07142857142857142
+            },
+            "24": {
+                "Release Purchase Order": 0.21428571428571427
+            },
+            "13": {
+                "Release Purchase Order": 0.07142857142857142
+            }
+        }
+    },
+    "6": {
+        "Confirm Purchase Order": {
+            "6": {
+                "Deliver Goods Services": 0.24480537909429487
+            },
+            "15": {
+                "Deliver Goods Services": 0.08690573720717616
+            },
+            "19": {
+                "Deliver Goods Services": 0.19923635307957435
+            },
+            "22": {
+                "Deliver Goods Services": 0.25651342329652255
+            },
+            "8": {
+                "Deliver Goods Services": 0.2125391073224321
+            }
+        },
+        "Deliver Goods Services": {
+            "7": {
+                "Release Purchase Order": 0.02197699473785283
+            },
+            "13": {
+                "Release Purchase Order": 0.09356863122876904
+            },
+            "12": {
+                "Release Purchase Order": 0.1444484984281974
+            },
+            "23": {
+                "Release Purchase Order": 0.11907664261850835
+            },
+            "11": {
+                "Release Purchase Order": 0.03838606171164602
+            },
+            "14": {
+                "Release Purchase Order": 0.0498822786700837
+            },
+            "18": {
+                "Release Purchase Order": 0.09484680154225768
+            },
+            "26": {
+                "Release Purchase Order": 0.016724515283163394
+            },
+            "3": {
+                "Release Purchase Order": 0.04309188317646043
+            },
+            "21": {
+                "Release Purchase Order": 0.13657053100840236
+            },
+            "4": {
+                "Release Purchase Order": 0.08070532994124374
+            },
+            "25": {
+                "Release Purchase Order": 0.09312971314341441
+            },
+            "24": {
+                "Release Purchase Order": 0.0003444344175544569
+            },
+            "0": {
+                "Release Purchase Order": 0.06724768409244615
+            }
+        },
+        "Send Invoice": {
+            "10": {
+                "Release Supplier's Invoice": 0.627869380207274
+            },
+            "9": {
+                "Release Supplier's Invoice": 0.24912201863932698,
+                "Authorize Supplier's Invoice payment": 0.12300860115339911
+            }
+        }
+    },
+    "7": {
+        "Amend Purchase Requisition": {
+            "16": {
+                "Analyze Purchase Requisition": 1.0
+            }
+        },
+        "Release Purchase Order": {
+            "1": {
+                "Approve Purchase Order for payment": 0.05290137447774289
+            },
+            "5": {
+                "Approve Purchase Order for payment": 0.013386027750866553,
+                "Settle Dispute With Supplier": 0.28384824544103976
+            },
+            "2": {
+                "Approve Purchase Order for payment": 0.30072472481500795,
+                "Settle Dispute With Supplier": 0.34913962751534294
+            }
+        },
+        "Analyze Quotation Comparison Map": {
+            "0": {
+                "Choose best option": 0.16632401510467534
+            },
+            "14": {
+                "Choose best option": 0.08401016371923109
+            },
+            "21": {
+                "Choose best option": 0.013100361727184267
+            },
+            "18": {
+                "Choose best option": 0.17172647995225265
+            },
+            "26": {
+                "Choose best option": 0.08896739840744239
+            },
+            "23": {
+                "Choose best option": 0.031970074628818075
+            },
+            "13": {
+                "Choose best option": 0.017567824238751185
+            },
+            "24": {
+                "Choose best option": 0.0008856312280698733
+            },
+            "12": {
+                "Choose best option": 0.05417509018982574
+            },
+            "11": {
+                "Choose best option": 0.1374333695412491
+            },
+            "7": {
+                "Choose best option": 0.0530774688191245
+            },
+            "25": {
+                "Choose best option": 0.059695208763693136
+            },
+            "3": {
+                "Choose best option": 0.12106691367968238
+            }
+        },
+        "Amend Request for Quotation": {
+            "5": {
+                "Analyze Request for Quotation": 0.47313919467393634
+            },
+            "1": {
+                "Analyze Request for Quotation": 0.4066321361445984
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.12022866918146533
+            }
+        },
+        "Choose best option": {
+            "5": {
+                "Settle Conditions With Supplier": 0.2311348187378667
+            },
+            "1": {
+                "Settle Conditions With Supplier": 0.28606099046604083
+            },
+            "2": {
+                "Settle Conditions With Supplier": 0.48280419079609244
+            }
+        },
+        "Create Purchase Requisition": {
+            "20": {
+                "Analyze Purchase Requisition": 0.225
+            },
+            "16": {
+                "Analyze Purchase Requisition": 0.3
+            },
+            "17": {
+                "Analyze Purchase Requisition": 0.2
+            },
+            "14": {
+                "Create Request for Quotation": 0.05
+            },
+            "25": {
+                "Create Request for Quotation": 0.05
+            },
+            "13": {
+                "Create Request for Quotation": 0.05
+            },
+            "21": {
+                "Create Request for Quotation": 0.025
+            },
+            "4": {
+                "Create Request for Quotation": 0.025
+            },
+            "11": {
+                "Create Request for Quotation": 0.05
+            },
+            "23": {
+                "Create Request for Quotation": 0.025
+            }
+        },
+        "Create Request for Quotation": {
+            "1": {
+                "Analyze Request for Quotation": 0.3076923076923077
+            },
+            "5": {
+                "Analyze Request for Quotation": 0.38461538461538464
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.3076923076923077
+            }
+        }
+    },
+    "8": {
+        "Send Invoice": {
+            "9": {
+                "Release Supplier's Invoice": 0.49137931034482757,
+                "Authorize Supplier's Invoice payment": 0.017241379310344827
+            },
+            "10": {
+                "Release Supplier's Invoice": 0.47413793103448276,
+                "Authorize Supplier's Invoice payment": 0.017241379310344827
+            }
+        },
+        "Deliver Goods Services": {
+            "25": {
+                "Release Purchase Order": 0.07258394359400809
+            },
+            "4": {
+                "Release Purchase Order": 0.11452569428894332
+            },
+            "3": {
+                "Release Purchase Order": 0.027803379400620977
+            },
+            "13": {
+                "Release Purchase Order": 0.07376750845601938
+            },
+            "23": {
+                "Release Purchase Order": 0.014008421922957084
+            },
+            "11": {
+                "Release Purchase Order": 0.0425460419092779
+            },
+            "14": {
+                "Release Purchase Order": 0.09387952420209875
+            },
+            "21": {
+                "Release Purchase Order": 0.07642690956895568
+            },
+            "7": {
+                "Release Purchase Order": 0.09519524413359207
+            },
+            "0": {
+                "Release Purchase Order": 0.04332825449049948
+            },
+            "26": {
+                "Release Purchase Order": 0.1114881953171098
+            },
+            "24": {
+                "Release Purchase Order": 0.040572590515577094
+            },
+            "12": {
+                "Release Purchase Order": 0.0492606067706522
+            },
+            "18": {
+                "Release Purchase Order": 0.1446136854296881
+            }
+        },
+        "Confirm Purchase Order": {
+            "6": {
+                "Deliver Goods Services": 0.2549019607843137
+            },
+            "8": {
+                "Deliver Goods Services": 0.1568627450980392
+            },
+            "19": {
+                "Deliver Goods Services": 0.19607843137254902
+            },
+            "22": {
+                "Deliver Goods Services": 0.18627450980392157
+            },
+            "15": {
+                "Deliver Goods Services": 0.20588235294117646
+            }
+        }
+    },
+    "9": {
+        "Pay Invoice": {
+            "9": {
+                "zzz_end": 1.0
+            }
+        },
+        "Release Supplier's Invoice": {
+            "9": {
+                "Authorize Supplier's Invoice payment": 0.48258706467661694,
+                "Settle Dispute With Supplier": 0.07960199004975124
+            },
+            "10": {
+                "Settle Dispute With Supplier": 0.11442786069651742,
+                "Authorize Supplier's Invoice payment": 0.32338308457711445
+            }
+        },
+        "Authorize Supplier's Invoice payment": {
+            "10": {
+                "Pay Invoice": 0.06291835430382642
+            },
+            "9": {
+                "Pay Invoice": 0.9370816456961736
+            }
+        },
+        "Settle Dispute With Supplier": {
+            "10": {
+                "Authorize Supplier's Invoice payment": 0.5942361976410722
+            },
+            "9": {
+                "Authorize Supplier's Invoice payment": 0.4057638023589278
+            }
+        }
+    },
+    "10": {
+        "Pay Invoice": {
+            "10": {
+                "zzz_end": 1.0
+            }
+        },
+        "Release Supplier's Invoice": {
+            "9": {
+                "Settle Dispute With Supplier": 0.1597411261651367,
+                "Authorize Supplier's Invoice payment": 0.36352320516339637
+            },
+            "10": {
+                "Authorize Supplier's Invoice payment": 0.1456825348137248,
+                "Settle Dispute With Supplier": 0.33105313385774204
+            }
+        },
+        "Authorize Supplier's Invoice payment": {
+            "9": {
+                "Pay Invoice": 0.5185185185185185
+            },
+            "10": {
+                "Pay Invoice": 0.48148148148148145
+            }
+        },
+        "Settle Dispute With Supplier": {
+            "10": {
+                "Authorize Supplier's Invoice payment": 0.20656761572799195
+            },
+            "9": {
+                "Authorize Supplier's Invoice payment": 0.793432384272008
+            }
+        }
+    },
+    "11": {
+        "Create Request for Quotation": {
+            "1": {
+                "Analyze Request for Quotation": 0.4930918558163658
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.49375097396038425
+            },
+            "5": {
+                "Analyze Request for Quotation": 0.013157170223249961
+            }
+        },
+        "Create Purchase Requisition": {
+            "17": {
+                "Analyze Purchase Requisition": 0.16366308638522795
+            },
+            "16": {
+                "Analyze Purchase Requisition": 0.008463893482161653
+            },
+            "11": {
+                "Create Request for Quotation": 0.16460983968538834
+            },
+            "7": {
+                "Create Request for Quotation": 0.16505093043134825
+            },
+            "18": {
+                "Create Request for Quotation": 0.08907509413481113
+            },
+            "12": {
+                "Create Request for Quotation": 0.007852535161302162
+            },
+            "3": {
+                "Create Request for Quotation": 0.03607335666859599
+            },
+            "20": {
+                "Analyze Purchase Requisition": 0.15824888432538056
+            },
+            "21": {
+                "Create Request for Quotation": 0.17086535366950611
+            },
+            "23": {
+                "Create Request for Quotation": 0.03609702605627777
+            }
+        },
+        "Release Purchase Order": {
+            "1": {
+                "Approve Purchase Order for payment": 0.5,
+                "Settle Dispute With Supplier": 0.03571428571428571
+            },
+            "2": {
+                "Approve Purchase Order for payment": 0.2857142857142857
+            },
+            "5": {
+                "Approve Purchase Order for payment": 0.17857142857142858
+            }
+        },
+        "Amend Request for Quotation": {
+            "1": {
+                "Analyze Request for Quotation": 0.275
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.4
+            },
+            "5": {
+                "Analyze Request for Quotation": 0.325
+            }
+        },
+        "Analyze Quotation Comparison Map": {
+            "11": {
+                "Choose best option": 0.0006998040666411963
+            },
+            "13": {
+                "Choose best option": 0.07961770304053234
+            },
+            "14": {
+                "Choose best option": 0.1495023576725937
+            },
+            "4": {
+                "Choose best option": 0.17160908099405356
+            },
+            "26": {
+                "Choose best option": 0.13673801996017956
+            },
+            "25": {
+                "Choose best option": 0.021849384881202
+            },
+            "21": {
+                "Choose best option": 0.02136317437445628
+            },
+            "7": {
+                "Choose best option": 0.11357944660236202
+            },
+            "18": {
+                "Choose best option": 0.16743418991622444
+            },
+            "12": {
+                "Choose best option": 0.0102581585002849
+            },
+            "23": {
+                "Choose best option": 0.019127159271538047
+            },
+            "3": {
+                "Choose best option": 0.09831282026885277
+            },
+            "0": {
+                "Choose best option": 0.009908700451079076
+            }
+        },
+        "Choose best option": {
+            "5": {
+                "Settle Conditions With Supplier": 0.4178599624785075
+            },
+            "1": {
+                "Settle Conditions With Supplier": 0.20301623529875992
+            },
+            "2": {
+                "Settle Conditions With Supplier": 0.3791238022227327
+            }
+        }
+    },
+    "12": {
+        "Amend Purchase Requisition": {
+            "16": {
+                "Analyze Purchase Requisition": 1.0
+            }
+        },
+        "Amend Request for Quotation": {
+            "2": {
+                "Analyze Request for Quotation": 0.28986682653275186
+            },
+            "5": {
+                "Analyze Request for Quotation": 0.5122876181400937
+            },
+            "1": {
+                "Analyze Request for Quotation": 0.19784555532715434
+            }
+        },
+        "Choose best option": {
+            "5": {
+                "Settle Conditions With Supplier": 0.23963556574390346
+            },
+            "2": {
+                "Settle Conditions With Supplier": 0.7021326794441544
+            },
+            "1": {
+                "Settle Conditions With Supplier": 0.05823175481194218
+            }
+        },
+        "Create Purchase Requisition": {
+            "11": {
+                "Create Request for Quotation": 0.017937392195251638
+            },
+            "20": {
+                "Analyze Purchase Requisition": 0.11249802587520577
+            },
+            "17": {
+                "Analyze Purchase Requisition": 0.14183503639400602
+            },
+            "25": {
+                "Create Request for Quotation": 0.08174565743278611
+            },
+            "16": {
+                "Analyze Purchase Requisition": 0.08854274951302905
+            },
+            "24": {
+                "Create Request for Quotation": 0.09398495607309715
+            },
+            "21": {
+                "Create Request for Quotation": 0.14068556694406478
+            },
+            "13": {
+                "Create Request for Quotation": 0.11879421715922014
+            },
+            "18": {
+                "Create Request for Quotation": 0.06653707398353659
+            },
+            "3": {
+                "Create Request for Quotation": 0.016967778435685713
+            },
+            "7": {
+                "Create Request for Quotation": 0.000866005971526605
+            },
+            "23": {
+                "Create Request for Quotation": 0.05497278944941828
+            },
+            "14": {
+                "Create Request for Quotation": 0.06463275057317207
+            }
+        },
+        "Release Purchase Order": {
+            "2": {
+                "Approve Purchase Order for payment": 0.10761915908328804
+            },
+            "5": {
+                "Settle Dispute With Supplier": 0.23148973282575208,
+                "Approve Purchase Order for payment": 0.22290505191774918
+            },
+            "1": {
+                "Approve Purchase Order for payment": 0.16429283808825565,
+                "Settle Dispute With Supplier": 0.273693218084955
+            }
+        },
+        "Create Request for Quotation": {
+            "5": {
+                "Analyze Request for Quotation": 0.5952949911718616
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.21282967246842896
+            },
+            "1": {
+                "Analyze Request for Quotation": 0.1918753363597094
+            }
+        },
+        "Analyze Quotation Comparison Map": {
+            "12": {
+                "Choose best option": 0.08863801537995378
+            },
+            "4": {
+                "Choose best option": 0.035889561990248946
+            },
+            "11": {
+                "Choose best option": 0.07882442608402758
+            },
+            "7": {
+                "Choose best option": 0.11554564739320951
+            },
+            "3": {
+                "Choose best option": 0.07418259860237485
+            },
+            "25": {
+                "Choose best option": 0.03222053220476752
+            },
+            "18": {
+                "Choose best option": 0.1343374038568308
+            },
+            "0": {
+                "Choose best option": 0.09521789625951228
+            },
+            "26": {
+                "Choose best option": 0.010200837627232295
+            },
+            "23": {
+                "Choose best option": 0.01055903268715366
+            },
+            "24": {
+                "Choose best option": 0.04542171921717587
+            },
+            "14": {
+                "Choose best option": 0.1560414241894107
+            },
+            "13": {
+                "Choose best option": 0.1229209045081023
+            }
+        }
+    },
+    "13": {
+        "Amend Request for Quotation": {
+            "1": {
+                "Analyze Request for Quotation": 0.3333333333333333
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.2777777777777778
+            },
+            "5": {
+                "Analyze Request for Quotation": 0.3888888888888889
+            }
+        },
+        "Analyze Quotation Comparison Map": {
+            "14": {
+                "Choose best option": 0.10344827586206896
+            },
+            "3": {
+                "Choose best option": 0.10344827586206896
+            },
+            "24": {
+                "Choose best option": 0.1724137931034483
+            },
+            "18": {
+                "Choose best option": 0.10344827586206896
+            },
+            "26": {
+                "Choose best option": 0.034482758620689655
+            },
+            "11": {
+                "Choose best option": 0.034482758620689655
+            },
+            "4": {
+                "Choose best option": 0.10344827586206896
+            },
+            "23": {
+                "Choose best option": 0.10344827586206896
+            },
+            "25": {
+                "Choose best option": 0.034482758620689655
+            },
+            "21": {
+                "Choose best option": 0.06896551724137931
+            },
+            "0": {
+                "Choose best option": 0.034482758620689655
+            },
+            "7": {
+                "Choose best option": 0.034482758620689655
+            },
+            "13": {
+                "Choose best option": 0.06896551724137931
+            }
+        },
+        "Create Purchase Requisition": {
+            "20": {
+                "Analyze Purchase Requisition": 0.040083759931398684
+            },
+            "3": {
+                "Create Request for Quotation": 0.023887891314529546
+            },
+            "18": {
+                "Create Request for Quotation": 0.04156022575120894
+            },
+            "26": {
+                "Create Request for Quotation": 0.09813663318263191
+            },
+            "13": {
+                "Create Request for Quotation": 0.0974984610248737
+            },
+            "17": {
+                "Analyze Purchase Requisition": 0.06792233823616221
+            },
+            "11": {
+                "Create Request for Quotation": 0.08818835205740835
+            },
+            "12": {
+                "Create Request for Quotation": 0.08401012191139362
+            },
+            "16": {
+                "Analyze Purchase Requisition": 0.09934344859518206
+            },
+            "4": {
+                "Create Request for Quotation": 0.04536800547642932
+            },
+            "21": {
+                "Create Request for Quotation": 0.01239548923063447
+            },
+            "24": {
+                "Create Request for Quotation": 0.08152158940384288
+            },
+            "25": {
+                "Create Request for Quotation": 0.09225006392808532
+            },
+            "0": {
+                "Create Request for Quotation": 0.015203843127274155
+            },
+            "14": {
+                "Create Request for Quotation": 0.11262977682894487
+            }
+        },
+        "Release Purchase Order": {
+            "5": {
+                "Approve Purchase Order for payment": 0.08497638020106002,
+                "Settle Dispute With Supplier": 0.011824836100595464
+            },
+            "1": {
+                "Approve Purchase Order for payment": 0.15320970423840005,
+                "Settle Dispute With Supplier": 0.2749768984311652
+            },
+            "2": {
+                "Approve Purchase Order for payment": 0.4750121810287793
+            }
+        },
+        "Choose best option": {
+            "1": {
+                "Settle Conditions With Supplier": 0.4130226765617104
+            },
+            "5": {
+                "Settle Conditions With Supplier": 0.3700677818389671
+            },
+            "2": {
+                "Settle Conditions With Supplier": 0.21690954159932258
+            }
+        },
+        "Create Request for Quotation": {
+            "2": {
+                "Analyze Request for Quotation": 0.09674161030491293
+            },
+            "1": {
+                "Analyze Request for Quotation": 0.37256474988339205
+            },
+            "5": {
+                "Analyze Request for Quotation": 0.530693639811695
+            }
+        }
+    },
+    "14": {
+        "Choose best option": {
+            "2": {
+                "Settle Conditions With Supplier": 0.40540540540540543
+            },
+            "5": {
+                "Settle Conditions With Supplier": 0.35135135135135137
+            },
+            "1": {
+                "Settle Conditions With Supplier": 0.24324324324324326
+            }
+        },
+        "Create Purchase Requisition": {
+            "20": {
+                "Analyze Purchase Requisition": 0.23255813953488372
+            },
+            "4": {
+                "Create Request for Quotation": 0.023255813953488372
+            },
+            "26": {
+                "Create Request for Quotation": 0.023255813953488372
+            },
+            "17": {
+                "Analyze Purchase Requisition": 0.20930232558139536
+            },
+            "16": {
+                "Analyze Purchase Requisition": 0.18604651162790697
+            },
+            "18": {
+                "Create Request for Quotation": 0.06976744186046512
+            },
+            "0": {
+                "Create Request for Quotation": 0.06976744186046512
+            },
+            "14": {
+                "Create Request for Quotation": 0.046511627906976744
+            },
+            "7": {
+                "Create Request for Quotation": 0.023255813953488372
+            },
+            "23": {
+                "Create Request for Quotation": 0.06976744186046512
+            },
+            "3": {
+                "Create Request for Quotation": 0.023255813953488372
+            },
+            "12": {
+                "Create Request for Quotation": 0.023255813953488372
+            }
+        },
+        "Amend Request for Quotation": {
+            "1": {
+                "Analyze Request for Quotation": 0.5878767323166388
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.2781286892295376
+            },
+            "5": {
+                "Analyze Request for Quotation": 0.13399457845382365
+            }
+        },
+        "Release Purchase Order": {
+            "5": {
+                "Approve Purchase Order for payment": 0.13353503865294208,
+                "Settle Dispute With Supplier": 0.1955644359487934
+            },
+            "1": {
+                "Approve Purchase Order for payment": 0.23356134103604415
+            },
+            "2": {
+                "Approve Purchase Order for payment": 0.1456046931558423,
+                "Settle Dispute With Supplier": 0.2917344912063782
+            }
+        },
+        "Analyze Quotation Comparison Map": {
+            "24": {
+                "Choose best option": 0.06870759687412425
+            },
+            "21": {
+                "Choose best option": 0.027994563300004063
+            },
+            "14": {
+                "Choose best option": 0.07237052034776328
+            },
+            "13": {
+                "Choose best option": 0.1377305890922659
+            },
+            "25": {
+                "Choose best option": 0.060815440153755077
+            },
+            "26": {
+                "Choose best option": 0.07098352028010654
+            },
+            "7": {
+                "Choose best option": 0.009423800368476665
+            },
+            "0": {
+                "Choose best option": 0.03063806411468065
+            },
+            "23": {
+                "Choose best option": 0.10398495138811116
+            },
+            "4": {
+                "Choose best option": 0.1456636719952427
+            },
+            "12": {
+                "Choose best option": 0.024553651541808254
+            },
+            "3": {
+                "Choose best option": 0.11900133264508389
+            },
+            "11": {
+                "Choose best option": 0.01643963769432612
+            },
+            "18": {
+                "Choose best option": 0.11169266020425146
+            }
+        },
+        "Create Request for Quotation": {
+            "5": {
+                "Analyze Request for Quotation": 0.23319414944300706
+            },
+            "1": {
+                "Analyze Request for Quotation": 0.3770375495469649
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.38976830101002796
+            }
+        }
+    },
+    "15": {
+        "Confirm Purchase Order": {
+            "15": {
+                "Deliver Goods Services": 0.17916798384069474
+            },
+            "19": {
+                "Deliver Goods Services": 0.10023073639945979
+            },
+            "6": {
+                "Deliver Goods Services": 0.13610493651004987
+            },
+            "22": {
+                "Deliver Goods Services": 0.43844643222073465
+            },
+            "8": {
+                "Deliver Goods Services": 0.14604991102906095
+            }
+        },
+        "Deliver Goods Services": {
+            "7": {
+                "Release Purchase Order": 0.11828413010199132
+            },
+            "3": {
+                "Release Purchase Order": 0.05734347263600011
+            },
+            "26": {
+                "Release Purchase Order": 0.1021448819239786
+            },
+            "11": {
+                "Release Purchase Order": 0.04473216704574839
+            },
+            "4": {
+                "Release Purchase Order": 0.050214674181382306
+            },
+            "23": {
+                "Release Purchase Order": 0.11835953194269244
+            },
+            "14": {
+                "Release Purchase Order": 0.08769433064176782
+            },
+            "18": {
+                "Release Purchase Order": 0.05650153880873081
+            },
+            "0": {
+                "Release Purchase Order": 0.11221066575926462
+            },
+            "24": {
+                "Release Purchase Order": 0.0029213313180276672
+            },
+            "12": {
+                "Release Purchase Order": 0.0803238398137084
+            },
+            "21": {
+                "Release Purchase Order": 0.10738615477665306
+            },
+            "13": {
+                "Release Purchase Order": 0.04814518207534686
+            },
+            "25": {
+                "Release Purchase Order": 0.013738098974707477
+            }
+        },
+        "Send Invoice": {
+            "10": {
+                "Release Supplier's Invoice": 0.08385314941541437,
+                "Authorize Supplier's Invoice payment": 0.366512934487589
+            },
+            "9": {
+                "Authorize Supplier's Invoice payment": 0.3211861734136989,
+                "Release Supplier's Invoice": 0.22844774268329776
+            }
+        }
+    },
+    "16": {
+        "Analyze Purchase Requisition": {
+            "17": {
+                "Create Request for Quotation": 0.12895625696012425
+            },
+            "16": {
+                "Create Request for Quotation": 0.0007908865124697796,
+                "zzz_end": 0.17729868933616602
+            },
+            "18": {
+                "Amend Purchase Requisition": 0.18267230135308682
+            },
+            "20": {
+                "Create Request for Quotation": 0.10845557801010458
+            },
+            "0": {
+                "Amend Purchase Requisition": 0.19240283518420775
+            },
+            "23": {
+                "Amend Purchase Requisition": 0.12250692347463304
+            },
+            "3": {
+                "Amend Purchase Requisition": 0.08691652916920774
+            }
+        },
+        "Create Request for Quotation": {
+            "5": {
+                "Analyze Request for Quotation": 0.35273515835975283
+            },
+            "1": {
+                "Analyze Request for Quotation": 0.2968138841886688
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.3504509574515784
+            }
+        },
+        "Amend Request for Quotation": {
+            "2": {
+                "Analyze Request for Quotation": 0.29191018535609314
+            },
+            "5": {
+                "Analyze Request for Quotation": 0.27723700919156335
+            },
+            "1": {
+                "Analyze Request for Quotation": 0.4308528054523435
+            }
+        }
+    },
+    "17": {
+        "Create Request for Quotation": {
+            "1": {
+                "Analyze Request for Quotation": 0.07876455630045356
+            },
+            "5": {
+                "Analyze Request for Quotation": 0.7642394037139151
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.15699603998563127
+            }
+        },
+        "Analyze Purchase Requisition": {
+            "17": {
+                "Create Request for Quotation": 0.014506002750327842,
+                "zzz_end": 0.0008007575000345316
+            },
+            "26": {
+                "Amend Purchase Requisition": 0.3341554359814657
+            },
+            "20": {
+                "Create Request for Quotation": 0.21404706374081184
+            },
+            "16": {
+                "Create Request for Quotation": 0.17030316299136206
+            },
+            "3": {
+                "Amend Purchase Requisition": 0.16872254132853934
+            },
+            "0": {
+                "Amend Purchase Requisition": 0.09746503570745876
+            }
+        },
+        "Amend Request for Quotation": {
+            "2": {
+                "Analyze Request for Quotation": 0.567813230858736
+            },
+            "5": {
+                "Analyze Request for Quotation": 0.3691809026448404
+            },
+            "1": {
+                "Analyze Request for Quotation": 0.06300586649642353
+            }
+        }
+    },
+    "18": {
+        "Amend Purchase Requisition": {
+            "20": {
+                "Analyze Purchase Requisition": 1.0
+            }
+        },
+        "Analyze Quotation Comparison Map": {
+            "12": {
+                "Choose best option": 0.03625994926988989
+            },
+            "21": {
+                "Choose best option": 0.0810213325710535
+            },
+            "25": {
+                "Choose best option": 0.12486080127426977
+            },
+            "0": {
+                "Choose best option": 0.007184418696434837
+            },
+            "14": {
+                "Choose best option": 0.11515306197523019
+            },
+            "26": {
+                "Choose best option": 0.10334886202928989
+            },
+            "18": {
+                "Choose best option": 0.034300778424487796
+            },
+            "24": {
+                "Choose best option": 0.10138733891744475
+            },
+            "7": {
+                "Choose best option": 0.07869745342581848
+            },
+            "11": {
+                "Choose best option": 0.030974078963984582
+            },
+            "13": {
+                "Choose best option": 0.014515870769263617
+            },
+            "3": {
+                "Choose best option": 0.12471764075645786
+            },
+            "23": {
+                "Choose best option": 0.06754321826844724
+            },
+            "4": {
+                "Choose best option": 0.08003519465792773
+            }
+        },
+        "Release Purchase Order": {
+            "2": {
+                "Approve Purchase Order for payment": 0.22111288440294985,
+                "Settle Dispute With Supplier": 0.09653651193233566
+            },
+            "5": {
+                "Approve Purchase Order for payment": 0.2573572673567497,
+                "Settle Dispute With Supplier": 0.3466484777648668
+            },
+            "1": {
+                "Approve Purchase Order for payment": 0.07834485854309801
+            }
+        },
+        "Amend Request for Quotation": {
+            "1": {
+                "Analyze Request for Quotation": 0.33058882485683033
+            },
+            "5": {
+                "Analyze Request for Quotation": 0.4739758353367368
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.19543533980643285
+            }
+        },
+        "Create Purchase Requisition": {
+            "12": {
+                "Create Request for Quotation": 0.1
+            },
+            "11": {
+                "Create Request for Quotation": 0.05
+            },
+            "20": {
+                "Analyze Purchase Requisition": 0.125
+            },
+            "24": {
+                "Create Request for Quotation": 0.025
+            },
+            "23": {
+                "Create Request for Quotation": 0.025
+            },
+            "16": {
+                "Analyze Purchase Requisition": 0.4
+            },
+            "17": {
+                "Analyze Purchase Requisition": 0.15
+            },
+            "25": {
+                "Create Request for Quotation": 0.025
+            },
+            "21": {
+                "Create Request for Quotation": 0.05
+            },
+            "26": {
+                "Create Request for Quotation": 0.025
+            },
+            "0": {
+                "Create Request for Quotation": 0.025
+            }
+        },
+        "Create Request for Quotation": {
+            "2": {
+                "Analyze Request for Quotation": 0.4095992991470694
+            },
+            "5": {
+                "Analyze Request for Quotation": 0.10467423328815473
+            },
+            "1": {
+                "Analyze Request for Quotation": 0.48572646756477594
+            }
+        },
+        "Choose best option": {
+            "2": {
+                "Settle Conditions With Supplier": 0.14679002756214582
+            },
+            "5": {
+                "Settle Conditions With Supplier": 0.2890546608156895
+            },
+            "1": {
+                "Settle Conditions With Supplier": 0.5641553116221647
+            }
+        }
+    },
+    "19": {
+        "Confirm Purchase Order": {
+            "15": {
+                "Deliver Goods Services": 0.10846810541648585
+            },
+            "8": {
+                "Deliver Goods Services": 0.0
+            },
+            "19": {
+                "Deliver Goods Services": 0.4211339579485548
+            },
+            "6": {
+                "Deliver Goods Services": 0.31957728540239355
+            },
+            "22": {
+                "Deliver Goods Services": 0.1508206512325658
+            }
+        },
+        "Deliver Goods Services": {
+            "21": {
+                "Release Purchase Order": 0.0921506769619562
+            },
+            "18": {
+                "Release Purchase Order": 0.08512774536488182
+            },
+            "24": {
+                "Release Purchase Order": 0.050412996089196103
+            },
+            "26": {
+                "Release Purchase Order": 0.05718146773922133
+            },
+            "12": {
+                "Release Purchase Order": 0.009041091710916547
+            },
+            "14": {
+                "Release Purchase Order": 0.05922550530042676
+            },
+            "11": {
+                "Release Purchase Order": 0.09138173030523088
+            },
+            "23": {
+                "Release Purchase Order": 0.10297813121045352
+            },
+            "3": {
+                "Release Purchase Order": 0.03354931161643867
+            },
+            "25": {
+                "Release Purchase Order": 0.09154111199165442
+            },
+            "7": {
+                "Release Purchase Order": 0.07391346867445536
+            },
+            "0": {
+                "Release Purchase Order": 0.09647838939191576
+            },
+            "4": {
+                "Release Purchase Order": 0.08711521710501455
+            },
+            "13": {
+                "Release Purchase Order": 0.06990315653823813
+            }
+        },
+        "Send Invoice": {
+            "9": {
+                "Release Supplier's Invoice": 0.27057713244557263
+            },
+            "10": {
+                "Release Supplier's Invoice": 0.3475472257292585,
+                "Authorize Supplier's Invoice payment": 0.3818756418251689
+            }
+        }
+    },
+    "20": {
+        "Analyze Purchase Requisition": {
+            "16": {
+                "Create Request for Quotation": 0.20167956035407206
+            },
+            "20": {
+                "Create Request for Quotation": 0.20864747140335427,
+                "zzz_end": 0.045921439652116536
+            },
+            "21": {
+                "Amend Purchase Requisition": 0.16751695661567373
+            },
+            "17": {
+                "Create Request for Quotation": 0.20555466705357567
+            },
+            "7": {
+                "Amend Purchase Requisition": 0.11299197805744778
+            },
+            "12": {
+                "Amend Purchase Requisition": 0.05768792686376006
+            }
+        },
+        "Create Request for Quotation": {
+            "1": {
+                "Analyze Request for Quotation": 0.42479604658090436
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.37733427712548173
+            },
+            "5": {
+                "Analyze Request for Quotation": 0.1978696762936139
+            }
+        },
+        "Amend Request for Quotation": {
+            "1": {
+                "Analyze Request for Quotation": 0.2570001620825797
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.41067654890161903
+            },
+            "5": {
+                "Analyze Request for Quotation": 0.3323232890158012
+            }
+        }
+    },
+    "21": {
+        "Amend Purchase Requisition": {
+            "20": {
+                "Analyze Purchase Requisition": 1.0
+            }
+        },
+        "Amend Request for Quotation": {
+            "5": {
+                "Analyze Request for Quotation": 0.31832370929934883
+            },
+            "1": {
+                "Analyze Request for Quotation": 0.3361876970569683
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.3454885936436828
+            }
+        },
+        "Choose best option": {
+            "2": {
+                "Settle Conditions With Supplier": 0.375
+            },
+            "1": {
+                "Settle Conditions With Supplier": 0.15625
+            },
+            "5": {
+                "Settle Conditions With Supplier": 0.46875
+            }
+        },
+        "Release Purchase Order": {
+            "1": {
+                "Approve Purchase Order for payment": 0.12182674760022068,
+                "Settle Dispute With Supplier": 0.21585503769959488
+            },
+            "5": {
+                "Approve Purchase Order for payment": 0.12032471450184003,
+                "Settle Dispute With Supplier": 0.20449874692538872
+            },
+            "2": {
+                "Approve Purchase Order for payment": 0.1478844558785008,
+                "Settle Dispute With Supplier": 0.1896102973944549
+            }
+        },
+        "Create Request for Quotation": {
+            "5": {
+                "Analyze Request for Quotation": 0.5555555555555556
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.2222222222222222
+            },
+            "1": {
+                "Analyze Request for Quotation": 0.2222222222222222
+            }
+        },
+        "Create Purchase Requisition": {
+            "17": {
+                "Analyze Purchase Requisition": 0.018743914144295205
+            },
+            "20": {
+                "Analyze Purchase Requisition": 0.008575402701116118
+            },
+            "16": {
+                "Analyze Purchase Requisition": 0.06689017756463483
+            },
+            "7": {
+                "Create Request for Quotation": 0.018255919028028565
+            },
+            "12": {
+                "Create Request for Quotation": 0.15648496954059934
+            },
+            "3": {
+                "Create Request for Quotation": 0.021443114073056158
+            },
+            "21": {
+                "Create Request for Quotation": 0.055607890780129655
+            },
+            "23": {
+                "Create Request for Quotation": 0.14141069811894866
+            },
+            "26": {
+                "Create Request for Quotation": 0.11117617723404923
+            },
+            "24": {
+                "Create Request for Quotation": 0.15667952547513608
+            },
+            "13": {
+                "Create Request for Quotation": 0.18593686059766898
+            },
+            "4": {
+                "Create Request for Quotation": 0.05879535074233705
+            }
+        },
+        "Analyze Quotation Comparison Map": {
+            "4": {
+                "Choose best option": 0.09090909090909091
+            },
+            "7": {
+                "Choose best option": 0.06060606060606061
+            },
+            "13": {
+                "Choose best option": 0.09090909090909091
+            },
+            "25": {
+                "Choose best option": 0.15151515151515152
+            },
+            "26": {
+                "Choose best option": 0.09090909090909091
+            },
+            "0": {
+                "Choose best option": 0.06060606060606061
+            },
+            "11": {
+                "Choose best option": 0.030303030303030304
+            },
+            "21": {
+                "Choose best option": 0.09090909090909091
+            },
+            "3": {
+                "Choose best option": 0.15151515151515152
+            },
+            "18": {
+                "Choose best option": 0.030303030303030304
+            },
+            "24": {
+                "Choose best option": 0.030303030303030304
+            },
+            "23": {
+                "Choose best option": 0.12121212121212122
+            }
+        }
+    },
+    "22": {
+        "Confirm Purchase Order": {
+            "22": {
+                "Deliver Goods Services": 0.33962287382023537
+            },
+            "19": {
+                "Deliver Goods Services": 0.2625290858258094
+            },
+            "8": {
+                "Deliver Goods Services": 0.16924591619739962
+            },
+            "6": {
+                "Deliver Goods Services": 0.20255545523347165
+            },
+            "15": {
+                "Deliver Goods Services": 0.026046668923084056
+            }
+        },
+        "Deliver Goods Services": {
+            "23": {
+                "Release Purchase Order": 0.060240963855421686
+            },
+            "24": {
+                "Release Purchase Order": 0.07228915662650602
+            },
+            "11": {
+                "Release Purchase Order": 0.08433734939759036
+            },
+            "26": {
+                "Release Purchase Order": 0.10843373493975904
+            },
+            "13": {
+                "Release Purchase Order": 0.07228915662650602
+            },
+            "3": {
+                "Release Purchase Order": 0.07228915662650602
+            },
+            "25": {
+                "Release Purchase Order": 0.04819277108433735
+            },
+            "14": {
+                "Release Purchase Order": 0.04819277108433735
+            },
+            "21": {
+                "Release Purchase Order": 0.060240963855421686
+            },
+            "12": {
+                "Release Purchase Order": 0.07228915662650602
+            },
+            "7": {
+                "Release Purchase Order": 0.04819277108433735
+            },
+            "4": {
+                "Release Purchase Order": 0.10843373493975904
+            },
+            "0": {
+                "Release Purchase Order": 0.0963855421686747
+            },
+            "18": {
+                "Release Purchase Order": 0.04819277108433735
+            }
+        },
+        "Send Invoice": {
+            "10": {
+                "Release Supplier's Invoice": 0.6265060240963856
+            },
+            "9": {
+                "Release Supplier's Invoice": 0.37349397590361444
+            }
+        }
+    },
+    "23": {
+        "Release Purchase Order": {
+            "2": {
+                "Approve Purchase Order for payment": 0.7967276993433886
+            },
+            "1": {
+                "Approve Purchase Order for payment": 0.01040445034497152
+            },
+            "5": {
+                "Approve Purchase Order for payment": 0.19286785031164003
+            }
+        },
+        "Analyze Quotation Comparison Map": {
+            "3": {
+                "Choose best option": 0.06012719827753471
+            },
+            "26": {
+                "Choose best option": 0.025937309374343766
+            },
+            "4": {
+                "Choose best option": 0.12217188427271143
+            },
+            "18": {
+                "Choose best option": 0.0010914256388708328
+            },
+            "0": {
+                "Choose best option": 0.08146608066236755
+            },
+            "11": {
+                "Choose best option": 0.08660621823681111
+            },
+            "14": {
+                "Choose best option": 0.08578101104182186
+            },
+            "23": {
+                "Choose best option": 0.10389583405532907
+            },
+            "24": {
+                "Choose best option": 0.12185490077879763
+            },
+            "12": {
+                "Choose best option": 0.10447309975471786
+            },
+            "21": {
+                "Choose best option": 0.09297773756859952
+            },
+            "13": {
+                "Choose best option": 0.11361730033809476
+            }
+        },
+        "Create Purchase Requisition": {
+            "17": {
+                "Analyze Purchase Requisition": 0.2926829268292683
+            },
+            "20": {
+                "Analyze Purchase Requisition": 0.2682926829268293
+            },
+            "21": {
+                "Create Request for Quotation": 0.024390243902439025
+            },
+            "16": {
+                "Analyze Purchase Requisition": 0.0975609756097561
+            },
+            "0": {
+                "Create Request for Quotation": 0.04878048780487805
+            },
+            "25": {
+                "Create Request for Quotation": 0.04878048780487805
+            },
+            "4": {
+                "Create Request for Quotation": 0.04878048780487805
+            },
+            "13": {
+                "Create Request for Quotation": 0.024390243902439025
+            },
+            "26": {
+                "Create Request for Quotation": 0.024390243902439025
+            },
+            "7": {
+                "Create Request for Quotation": 0.024390243902439025
+            },
+            "14": {
+                "Create Request for Quotation": 0.024390243902439025
+            },
+            "18": {
+                "Create Request for Quotation": 0.04878048780487805
+            },
+            "12": {
+                "Create Request for Quotation": 0.024390243902439025
+            }
+        },
+        "Amend Request for Quotation": {
+            "1": {
+                "Analyze Request for Quotation": 0.2978723404255319
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.3404255319148936
+            },
+            "5": {
+                "Analyze Request for Quotation": 0.3617021276595745
+            }
+        },
+        "Create Request for Quotation": {
+            "1": {
+                "Analyze Request for Quotation": 0.23529411764705882
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.7058823529411765
+            },
+            "5": {
+                "Analyze Request for Quotation": 0.058823529411764705
+            }
+        },
+        "Choose best option": {
+            "1": {
+                "Settle Conditions With Supplier": 0.29274186511860095
+            },
+            "2": {
+                "Settle Conditions With Supplier": 0.34659964441592234
+            },
+            "5": {
+                "Settle Conditions With Supplier": 0.3606584904654767
+            }
+        },
+        "Amend Purchase Requisition": {
+            "25": {
+                "Create Request for Quotation": 0.5
+            },
+            "26": {
+                "Create Request for Quotation": 0.5
+            }
+        }
+    },
+    "24": {
+        "Amend Request for Quotation": {
+            "1": {
+                "Analyze Request for Quotation": 0.4789308152780994
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.12700053555472812
+            },
+            "5": {
+                "Analyze Request for Quotation": 0.3940686491671726
+            }
+        },
+        "Analyze Quotation Comparison Map": {
+            "21": {
+                "Choose best option": 0.11538461538461539
+            },
+            "3": {
+                "Choose best option": 0.19230769230769232
+            },
+            "13": {
+                "Choose best option": 0.038461538461538464
+            },
+            "11": {
+                "Choose best option": 0.038461538461538464
+            },
+            "0": {
+                "Choose best option": 0.11538461538461539
+            },
+            "4": {
+                "Choose best option": 0.11538461538461539
+            },
+            "14": {
+                "Choose best option": 0.11538461538461539
+            },
+            "24": {
+                "Choose best option": 0.07692307692307693
+            },
+            "18": {
+                "Choose best option": 0.038461538461538464
+            },
+            "26": {
+                "Choose best option": 0.11538461538461539
+            },
+            "23": {
+                "Choose best option": 0.038461538461538464
+            }
+        },
+        "Choose best option": {
+            "5": {
+                "Settle Conditions With Supplier": 0.4147954181351409
+            },
+            "1": {
+                "Settle Conditions With Supplier": 0.5749757720996735
+            },
+            "2": {
+                "Settle Conditions With Supplier": 0.010228809765185556
+            }
+        },
+        "Create Purchase Requisition": {
+            "11": {
+                "Create Request for Quotation": 0.14723473381250646
+            },
+            "17": {
+                "Analyze Purchase Requisition": 0.03466309946059015
+            },
+            "16": {
+                "Analyze Purchase Requisition": 0.05257745447034433
+            },
+            "20": {
+                "Analyze Purchase Requisition": 0.007080762899218595
+            },
+            "12": {
+                "Create Request for Quotation": 0.006647094949572343
+            },
+            "26": {
+                "Create Request for Quotation": 0.06010890698948901
+            },
+            "21": {
+                "Create Request for Quotation": 0.021349040748023896
+            },
+            "18": {
+                "Create Request for Quotation": 0.15346583076608342
+            },
+            "24": {
+                "Create Request for Quotation": 0.12456465798682763
+            },
+            "0": {
+                "Create Request for Quotation": 0.1912723388732531
+            },
+            "23": {
+                "Create Request for Quotation": 0.05820628642951189
+            },
+            "25": {
+                "Create Request for Quotation": 0.008880866327727594
+            },
+            "4": {
+                "Create Request for Quotation": 0.11768748459060416
+            },
+            "14": {
+                "Create Request for Quotation": 0.016261441696247454
+            }
+        },
+        "Release Purchase Order": {
+            "5": {
+                "Approve Purchase Order for payment": 0.4148946332142644,
+                "Settle Dispute With Supplier": 0.16868819872470447
+            },
+            "1": {
+                "Approve Purchase Order for payment": 0.07207115002080897
+            },
+            "2": {
+                "Approve Purchase Order for payment": 0.3443460180402222
+            }
+        },
+        "Create Request for Quotation": {
+            "2": {
+                "Analyze Request for Quotation": 0.2222222222222222
+            },
+            "1": {
+                "Analyze Request for Quotation": 0.3888888888888889
+            },
+            "5": {
+                "Analyze Request for Quotation": 0.3888888888888889
+            }
+        }
+    },
+    "25": {
+        "Release Purchase Order": {
+            "5": {
+                "Approve Purchase Order for payment": 0.4673838615962711
+            },
+            "2": {
+                "Approve Purchase Order for payment": 0.41106287326865487
+            },
+            "1": {
+                "Approve Purchase Order for payment": 0.12155326513507417
+            }
+        },
+        "Amend Request for Quotation": {
+            "1": {
+                "Analyze Request for Quotation": 0.2857142857142857
+            },
+            "5": {
+                "Analyze Request for Quotation": 0.38095238095238093
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.3333333333333333
+            }
+        },
+        "Analyze Quotation Comparison Map": {
+            "21": {
+                "Choose best option": 0.18582738981772134
+            },
+            "18": {
+                "Choose best option": 0.04664932981095775
+            },
+            "3": {
+                "Choose best option": 0.042858277851956374
+            },
+            "14": {
+                "Choose best option": 0.0623298169018826
+            },
+            "4": {
+                "Choose best option": 0.13761449826340869
+            },
+            "25": {
+                "Choose best option": 0.10943283612134602
+            },
+            "0": {
+                "Choose best option": 0.022399160199577106
+            },
+            "23": {
+                "Choose best option": 0.1220213142172157
+            },
+            "12": {
+                "Choose best option": 0.055745750888453426
+            },
+            "24": {
+                "Choose best option": 0.020042605082329468
+            },
+            "7": {
+                "Choose best option": 0.09435060985096347
+            },
+            "26": {
+                "Choose best option": 0.10072841099418792
+            }
+        },
+        "Create Purchase Requisition": {
+            "25": {
+                "Create Request for Quotation": 0.038461538461538464
+            },
+            "17": {
+                "Analyze Purchase Requisition": 0.23076923076923078
+            },
+            "20": {
+                "Analyze Purchase Requisition": 0.15384615384615385
+            },
+            "23": {
+                "Create Request for Quotation": 0.07692307692307693
+            },
+            "16": {
+                "Analyze Purchase Requisition": 0.15384615384615385
+            },
+            "18": {
+                "Create Request for Quotation": 0.019230769230769232
+            },
+            "7": {
+                "Create Request for Quotation": 0.057692307692307696
+            },
+            "4": {
+                "Create Request for Quotation": 0.038461538461538464
+            },
+            "12": {
+                "Create Request for Quotation": 0.038461538461538464
+            },
+            "26": {
+                "Create Request for Quotation": 0.019230769230769232
+            },
+            "14": {
+                "Create Request for Quotation": 0.057692307692307696
+            },
+            "13": {
+                "Create Request for Quotation": 0.019230769230769232
+            },
+            "24": {
+                "Create Request for Quotation": 0.038461538461538464
+            },
+            "11": {
+                "Create Request for Quotation": 0.019230769230769232
+            },
+            "21": {
+                "Create Request for Quotation": 0.038461538461538464
+            }
+        },
+        "Create Request for Quotation": {
+            "1": {
+                "Analyze Request for Quotation": 0.35294117647058826
+            },
+            "5": {
+                "Analyze Request for Quotation": 0.35294117647058826
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.29411764705882354
+            }
+        },
+        "Choose best option": {
+            "1": {
+                "Settle Conditions With Supplier": 0.32577312381893875
+            },
+            "5": {
+                "Settle Conditions With Supplier": 0.334761511252479
+            },
+            "2": {
+                "Settle Conditions With Supplier": 0.33946536492858237
+            }
+        }
+    },
+    "26": {
+        "Amend Purchase Requisition": {
+            "4": {
+                "Create Request for Quotation": 1.0
+            }
+        },
+        "Amend Request for Quotation": {
+            "5": {
+                "Analyze Request for Quotation": 0.35135135135135137
+            },
+            "1": {
+                "Analyze Request for Quotation": 0.43243243243243246
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.21621621621621623
+            }
+        },
+        "Analyze Quotation Comparison Map": {
+            "4": {
+                "Choose best option": 0.1
+            },
+            "24": {
+                "Choose best option": 0.06666666666666667
+            },
+            "14": {
+                "Choose best option": 0.23333333333333334
+            },
+            "11": {
+                "Choose best option": 0.13333333333333333
+            },
+            "21": {
+                "Choose best option": 0.06666666666666667
+            },
+            "13": {
+                "Choose best option": 0.03333333333333333
+            },
+            "26": {
+                "Choose best option": 0.1
+            },
+            "18": {
+                "Choose best option": 0.03333333333333333
+            },
+            "0": {
+                "Choose best option": 0.06666666666666667
+            },
+            "3": {
+                "Choose best option": 0.03333333333333333
+            },
+            "7": {
+                "Choose best option": 0.06666666666666667
+            },
+            "12": {
+                "Choose best option": 0.06666666666666667
+            }
+        },
+        "Create Request for Quotation": {
+            "1": {
+                "Analyze Request for Quotation": 0.20174976071037476
+            },
+            "2": {
+                "Analyze Request for Quotation": 0.2517310339359751
+            },
+            "5": {
+                "Analyze Request for Quotation": 0.5465192053536501
+            }
+        },
+        "Create Purchase Requisition": {
+            "17": {
+                "Analyze Purchase Requisition": 0.2926829268292683
+            },
+            "13": {
+                "Create Request for Quotation": 0.0975609756097561
+            },
+            "16": {
+                "Analyze Purchase Requisition": 0.14634146341463414
+            },
+            "20": {
+                "Analyze Purchase Requisition": 0.14634146341463414
+            },
+            "3": {
+                "Create Request for Quotation": 0.04878048780487805
+            },
+            "14": {
+                "Create Request for Quotation": 0.04878048780487805
+            },
+            "4": {
+                "Create Request for Quotation": 0.024390243902439025
+            },
+            "24": {
+                "Create Request for Quotation": 0.024390243902439025
+            },
+            "0": {
+                "Create Request for Quotation": 0.024390243902439025
+            },
+            "26": {
+                "Create Request for Quotation": 0.04878048780487805
+            },
+            "18": {
+                "Create Request for Quotation": 0.04878048780487805
+            },
+            "21": {
+                "Create Request for Quotation": 0.04878048780487805
+            }
+        },
+        "Release Purchase Order": {
+            "1": {
+                "Approve Purchase Order for payment": 0.24242424242424243
+            },
+            "2": {
+                "Approve Purchase Order for payment": 0.36363636363636365
+            },
+            "5": {
+                "Approve Purchase Order for payment": 0.3939393939393939
+            }
+        },
+        "Choose best option": {
+            "1": {
+                "Settle Conditions With Supplier": 0.2571428571428571
+            },
+            "2": {
+                "Settle Conditions With Supplier": 0.5142857142857142
+            },
+            "5": {
+                "Settle Conditions With Supplier": 0.22857142857142856
+            }
+        }
+    }
+}
