@@ -197,10 +197,13 @@ def find_most_balanced_solution(points_np):
 # --- Main Evaluation Logic ---
 # =============================================================================
 def main():
+    import seaborn as sns
+    sns.set_style("whitegrid")
+    sns.set_context("talk")
     print("--- Starting Evaluation of Optimization Runs ---")
     
     # --- Part 1: Data Aggregation and Preparation ---
-    DATASET = 'Confidential_2000'
+    DATASET = 'ConsultaDataMining'
 
     search_dir = f'optimization_runs/{DATASET}'
     
@@ -253,7 +256,7 @@ def main():
         print(f"Using reference point for Hyperarea: Cost={ref_point[0]:.2f}, Wait={ref_point[1]:.2f}")
 
         # --- Plotting ---
-        plt.figure(figsize=(12, 9))
+        plt.figure(figsize=(18, 10))
         colors = ['#ff7f0e', '#1f77b4', '#d62728', '#2ca02c'] 
         markers = ['s', 'o', '^', 'D']
         
@@ -265,21 +268,44 @@ def main():
                 variant_name = 'Hybrid'
             front_np = np.array(data['pareto_front'])
             plt.scatter(front_np[:, 0], front_np[:, 1], 
-                        c=colors[i % len(colors)], marker=markers[i % len(markers)], s=150, 
+                        c=colors[i % len(colors)], marker=markers[i % len(markers)], s=250, 
                         label=f"{variant_name}")
 
-        plt.scatter(pref[:, 0], pref[:, 1], c='black', marker='x', s=150, alpha=0.7,
+        # also add five baseline solutions to the plot
+        baseline_colors = ['#ff7f0e', '#1f77b4', '#d62728', '#2ca02c', '#9467bd']
+        baselines = {}
+        for data in all_run_data:
+            for bname, bvals in data['baselines'].items():
+                if bname == 'Cost':
+                    bname = 'LC'
+                if bname not in baselines:
+                    baselines[bname] = {'cost': 0, 'wait': 0}
+                baselines[bname]['cost'] += bvals['cost']
+                baselines[bname]['wait'] += bvals['wait']
+        for bname, bvals in baselines.items():
+            baselines[bname]['cost'] /= len(all_run_data)
+            baselines[bname]['wait'] /= len(all_run_data)
+        for bname, bvals in baselines.items():
+            plt.scatter(bvals['cost'], bvals['wait'], c=baseline_colors[list(baselines.keys()).index(bname)], marker='X', s=250, alpha=1.0,
+                        label=f'{bname}')
+
+        plt.scatter(pref[:, 0], pref[:, 1], c='black', marker='x', s=250, alpha=0.7,
                     label=f'Front', zorder=10)
-        plt.scatter(ref_point[0], ref_point[1], c='purple', marker='X', s=150,
-                    label='Hyperarea RP', zorder=10, alpha=0.8)
+        # plt.scatter(ref_point[0], ref_point[1], c='purple', marker='X', s=150,
+        #             label='Hyperarea RP', zorder=10, alpha=0.8)
 
         # plt.title(f'Comparison of Pareto Fronts from Different Mutation Strategies [{DATASET}]')
-        plt.xlabel('Total Cost ($)', fontsize=30)
-        plt.ylabel('Average Wait Time (hours)', fontsize=30)
-        plt.xticks(fontsize=25)
-        plt.yticks(fontsize=25)
+        plt.xlabel('Total Cost ($)', fontsize=35)
+        plt.ylabel('Average Wait Time (hours)', fontsize=35)
+        plt.xticks(fontsize=30)
+        plt.yticks(fontsize=30)
         plt.grid(True, linestyle='--', alpha=0.6)
-        plt.legend(fontsize=25)
+        plt.legend(fontsize=30, ncol=2)
+        # plt.tight_layout()
+        # log scale on x-axis
+        # plt.xscale('log')
+        # log scale on y-axis
+        plt.yscale('log')
         plot_path = f'results/pareto_front_comparison_{DATASET}.pdf'
         plt.savefig(plot_path)
         print(f"\nSaved comparison plot to '{plot_path}'")
