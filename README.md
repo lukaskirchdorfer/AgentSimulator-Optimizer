@@ -36,7 +36,7 @@ You need to specify the following parameters regarding the input event log:
 
 `--start_timestamp`: name of the start timestamp column
 
-`--costs_path`:
+`--costs_path`: if cost is an objective, you need to specify the path to the json file that assigns hourly costs per resource
 
 Then, you can specify the following parameters for the optimization:
 
