@@ -2,7 +2,10 @@
 This is the supplementary GitHub repository of the paper: "From Global Policies to Local Strategies: Multi-Objective Optimization of Resource-Specific Handover Policies".
 
 ### Abstract
-Efficient resource allocation is a key challenge in business process management, with direct implications for cost, throughput time, and utilization. While recent Reinforcement Learning (RL) approaches have shown promise in deriving adaptive allocation policies, they typically neglect inter-resource collaboration patterns that can strongly influence real-world task handovers. This paper introduces the first approach for multi-objective optimization of resource-level decision-making, enabling the discovery of person-specific handover policies. Building on a Multi-Agent System (MAS)-based process simulator, we extend it from a descriptive to a prescriptive optimization environment by integrating the Non-dominated Sorting Genetic Algorithm-II (NSGA-II). The resulting approach learns Pareto-optimal, resource-specific policies that optimize the process across multiple objectives. Experimental results on synthetic and real-world datasets show that our approach reduces cost by an average of 37% and waiting time by 58%, consistently outperforming heuristic baselines and demonstrating the potential of leveraging collaboration-aware optimization for process performance improvement.
+Efficient resource allocation is a key challenge in business process management, with direct implications for cost, throughput time, and utilization. While recent Reinforcement Learning (RL) approaches have shown promise in deriving adaptive allocation policies, they typically neglect inter-resource collaboration patterns that can strongly influence real-world task handovers. Recognizing this, this paper introduces the first approach for multi-objective optimization of resource-level decision-making, enabling the discovery of person-specific handover policies. 
+To achieve this, our work combines an existing Multi-Agent System-based process simulator with a multi-objective evolutionary algorithm.
+The resulting approach learns Pareto-optimal, resource-specific policies that optimize the process across multiple objectives.
+Experimental results on synthetic and real-world datasets show that our approach reduces costs by an average of 37% and waiting time by 58%, consistently outperforming heuristic baselines and demonstrating the potential of leveraging collaboration-aware optimization to improve process performance.
 
 ### Environment setup (Conda + pip)
 
@@ -54,6 +57,5 @@ Then, you can specify the following parameters for the optimization:
 
 `--mutation_choice`: mutation variant (0.5 for Guided, 0.7 for Greedy, 1 for Random, empty for Hybrid)
 
-All commands to run the datasets evaluated in our paper are in jobs/caise/.
 
 We provide additional results in supplementary_material.pdf.
