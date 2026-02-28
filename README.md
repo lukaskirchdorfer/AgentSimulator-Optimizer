@@ -57,6 +57,3 @@ Then, you can specify the following parameters for the optimization:
 All commands to run the datasets evaluated in our paper are in jobs/caise/.
 
 We provide additional results in supplementary_material.pdf.
-
-## Authors
-Lukas Kirchdorfer, Artemis Doumeni, Han van der Aa, Hugo A. López
