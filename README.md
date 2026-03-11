@@ -1,4 +1,4 @@
-# AgentSimulator-Optimizer
+# BPS-MAS-Handover-Optimizer
 This is the supplementary GitHub repository of the paper: "From Global Policies to Local Strategies: Multi-Objective Optimization of Resource-Specific Handover Policies".
 
 ### Abstract
